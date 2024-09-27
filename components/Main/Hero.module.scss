@@ -1,0 +1,125 @@
+@import "../../styles/colors";
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 53vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    color: $white-smooth;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.hero__title {
+  &Span {
+    color: $green2;
+    font-weight: bold;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    z-index: 1;
+  }
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 2rem;
+  transition: filter 1s ease-out;
+
+  p {
+    color: $white-smooth;
+  }
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.6rem;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  border-radius: 0.4rem;
+  color: $dark-smooth;
+  background-color: $white-smooth;
+  box-shadow: 0.2rem 0.4rem 0.6rem rgba(56, 201, 34, 0.2);
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0.5rem 0.8rem 1rem rgba(14, 136, 160, 0.4),
+      0 0 1rem rgba(168, 67, 49, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 2.4rem;
+  }
+
+  .button {
+    font-size: 2.4rem;
+  }
+}

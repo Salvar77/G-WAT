@@ -1,0 +1,52 @@
+@import "../../styles/colors";
+
+.bookingPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  // background: linear-gradient(220deg, #f0f0f0 0%, #d35400 50%, #4b4b4b 100%);
+  background: linear-gradient(
+    150deg,
+    $light-gray,
+    $white-smooth,
+    $white-smooth
+  );
+
+  h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &H2 {
+    color: $white-smooth;
+    margin: 0 auto;
+    max-width: 20rem;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bookingPageContainer {
+    .contentWrapper {
+      flex-direction: row;
+      width: auto;
+    }
+
+    &H2 {
+      font-size: 3rem;
+    }
+  }
+}

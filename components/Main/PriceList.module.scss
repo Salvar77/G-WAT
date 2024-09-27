@@ -1,0 +1,196 @@
+@import "../../styles/colors";
+
+.pricingSection {
+  padding: 3rem;
+  background: $white-smooth;
+}
+
+.pricingHeader {
+  text-align: center;
+  padding: 1rem;
+
+  width: 15rem;
+
+  color: $white-smooth;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+  // background: linear-gradient(220deg, rgba($green5, 0.38), rgba($green8, 0.9));
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+
+    @media (min-width: 992px) {
+      max-width: 60rem;
+      max-height: 50rem;
+    }
+  }
+}
+
+.h3 {
+  padding: 2rem;
+}
+
+.pricingList {
+  padding: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(232, 232, 235, 0.4);
+  border-radius: 0.6rem;
+}
+
+.pricingType {
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(232, 232, 235, 0.9);
+  border-radius: 0.6rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: $white-smooth-hover;
+
+  &:hover {
+    background-color: lighten($white-smooth-hover, 5%);
+    transition: background-color 0.3s ease;
+  }
+}
+
+.regionName {
+  font-weight: bold;
+  color: $dark-smooth;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.pricingText {
+  font-size: 1.6rem;
+  color: rgba($dark-smooth, 0.8);
+  margin-bottom: 0.5rem;
+
+  span {
+    color: $green;
+  }
+}
+
+.pricingListItem {
+  border: 1px solid white;
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(232, 232, 235, 0.9);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin: 1rem;
+  list-style: none;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.serviceHeader {
+  cursor: pointer;
+  padding: 10px;
+  background-color: $green2;
+  color: $white-smooth;
+  box-shadow: 0.3rem 0.4rem 0.8rem rgba(232, 232, 235, 0.9);
+  border: 2px solid rgba(61, 54, 54, 0.1);
+  border-radius: 0.4rem;
+  font-weight: bold;
+
+  &.active {
+    background-color: rgba($green2, 0.8);
+    color: $white-smooth;
+  }
+}
+
+.serviceDetails {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-radius: 0.2rem;
+}
+
+.active {
+  background-color: $white-smooth;
+  color: $dark-smooth;
+}
+
+.priceValue {
+  color: $blue-after;
+}
+
+.description {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pricingHeader {
+    font-size: 2.8rem;
+  }
+
+  .servicesContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .pricingList {
+    font-size: 2rem;
+  }
+
+  .pricingInfo {
+    font-size: 1.8rem;
+  }
+
+  .serviceHeader {
+    font-size: 1.8rem;
+  }
+
+  .h3 {
+    font-size: 2rem;
+  }
+
+  .regionName {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pricingHeader {
+    font-size: 3rem;
+  }
+  .pricingList {
+    font-size: 2.2rem;
+  }
+
+  .serviceHeader {
+    font-size: 2.4rem;
+  }
+
+  .pricingInfo {
+    font-size: 3rem;
+  }
+
+  .h3 {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 2rem;
+  }
+
+  .regionName {
+    font-size: 2rem;
+  }
+}

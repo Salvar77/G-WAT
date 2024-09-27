@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Prompt", sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+// .container {
+//   position: relative;
+//   max-width: 1100px;
+//   margin: 0 auto;
+// }

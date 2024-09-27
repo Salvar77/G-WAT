@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+
+.appointmentCalendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: $white-smooth;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  max-width: 100%;
+
+  &__h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 2rem;
+    color: $grey-smooth-3;
+    text-align: center;
+  }
+}

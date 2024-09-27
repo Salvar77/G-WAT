@@ -1,0 +1,38 @@
+@import "../../styles/colors";
+
+.footer {
+  background-color: $green8;
+  padding: 2rem;
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+    &Info {
+      color: $white-smooth;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    list-style: none;
+
+    li {
+      margin: 0 0.4rem;
+
+      a {
+        color: $dark-smooth;
+        text-decoration: none;
+        &:hover {
+          color: $gold-main;
+        }
+      }
+    }
+  }
+}

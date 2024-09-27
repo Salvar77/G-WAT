@@ -1,0 +1,92 @@
+@import "../../styles/colors";
+
+.contact {
+  padding: 2rem;
+  // background: linear-gradient(150deg, #4b4b4b, #d35400 50%, #f0f0f0 100%);
+  background-color: $white-smooth;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: $white-smooth;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    &Header {
+      color: $white-smooth;
+      padding: 1rem;
+      background: linear-gradient(
+        220deg,
+        rgba($green5, 0.38),
+        rgba($green8, 0.9)
+      );
+      // background: linear-gradient(
+      //   135deg,
+      //   rgba($green3, 0.38),
+      //   rgba($green5, 0.3)
+      // );
+      border-radius: 0.6rem;
+      margin-bottom: 2rem;
+      text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.7);
+    }
+
+    p {
+      margin: 0.5rem;
+      border-bottom: 1px solid $green2;
+      //   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.3rem;
+  }
+}
+
+.highlightedText {
+  color: $green2;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    &__box {
+      &Header {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 2.2rem;
+      }
+    }
+
+    &__icon {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact {
+    &__box {
+      max-width: 1300px;
+      margin: 0 auto;
+      &Header {
+        font-size: 2.7rem;
+      }
+
+      p {
+        font-size: 2.3rem;
+      }
+    }
+
+    &__icon {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}
