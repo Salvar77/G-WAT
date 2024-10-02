@@ -33,7 +33,7 @@ export const POST = async (req) => {
     return new Response("Brakujące dane w metadanych", { status: 400 });
   }
 
-  const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
+  const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
   const serviceAccountKey = JSON.parse(
     await fs.readFile(serviceAccountKeyPath, "utf-8")
   );
