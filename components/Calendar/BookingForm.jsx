@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TextField, Button } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
@@ -6,9 +6,12 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import classes from "./BookingForm.module.scss";
 import dayjs from "dayjs";
 import "dayjs/locale/pl";
+import { useRouter } from "next/navigation";
 dayjs.locale("pl");
 
 const BookingForm = ({ selectedDate }) => {
+  const router = useRouter();
+  const [isMounted, setIsMounted] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [selectedTime, setSelectedTime] = useState(dayjs());
 
@@ -19,6 +22,11 @@ const BookingForm = ({ selectedDate }) => {
     if (!time) return false;
     return time.isAfter(minTime) && time.isBefore(maxTime);
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+    return () => setIsMounted(false); // Czyszczenie flagi przy odmontowywaniu
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,10 +64,9 @@ const BookingForm = ({ selectedDate }) => {
       });
 
       if (response.ok) {
-        const result = await response.json();
-        alert(
-          `Wydarzenie zostało dodane do kalendarza. Link do wydarzenia: ${result.eventLink}`
-        );
+        if (isMounted) {
+          router.push("/sukces");
+        }
       } else {
         const error = await response.json();
         alert("Wystąpił błąd: " + error.message);
