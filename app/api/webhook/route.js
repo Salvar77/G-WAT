@@ -35,6 +35,10 @@ export const POST = async (req) => {
 
   let serviceAccountKey;
   if (process.env.NODE_ENV === "production") {
+    console.log(
+      "GOOGLE_SERVICE_ACCOUNT_KEY:",
+      process.env.GOOGLE_SERVICE_ACCOUNT_KEY
+    );
     // W produkcji użyj zmiennej środowiskowej jako stringa
     serviceAccountKey = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
   } else {
