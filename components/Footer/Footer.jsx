@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.footer__container}>
         <div className={classes.footer__text}>
-          <p className={classes.footer__textInfo}>&copy;{currentYear} G-WATT</p>
+          <p className={classes.footer__textInfo}>&copy;{currentYear} G-WAT</p>
         </div>
       </div>
     </footer>

@@ -37,17 +37,12 @@ const BookingForm = ({ selectedDate }) => {
       return;
     }
 
-    if (!isTimeValid(selectedTime)) {
-      alert("Proszę wybrać godzinę pomiędzy 9:00 a 17:00.");
-      return;
-    }
-
     const fullDate = new Date(selectedDate);
     fullDate.setHours(selectedTime.hour());
     fullDate.setMinutes(selectedTime.minute());
 
     try {
-      const response = await fetch("/api/create-checkout-session", {
+      const response = await fetch("/api/webhook", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,16 +55,18 @@ const BookingForm = ({ selectedDate }) => {
         }),
       });
 
-      const session = await response.json();
-
       if (response.ok) {
-        window.location.href = session.url;
+        const result = await response.json();
+        alert(
+          `Wydarzenie zostało dodane do kalendarza. Link do wydarzenia: ${result.eventLink}`
+        );
       } else {
-        alert("Wystąpił błąd podczas tworzenia sesji płatności.");
+        const error = await response.json();
+        alert("Wystąpił błąd: " + error.message);
       }
     } catch (error) {
-      console.error("Błąd podczas tworzenia sesji Stripe:", error);
-      alert("Wystąpił błąd podczas tworzenia sesji płatności.");
+      console.error("Błąd podczas dodawania wydarzenia:", error);
+      alert("Wystąpił błąd podczas dodawania wydarzenia.");
     }
   };
 
@@ -129,7 +126,7 @@ const BookingForm = ({ selectedDate }) => {
       </div>
 
       <Button type="submit" variant="contained" color="primary">
-        Dokonaj rezerwacji i wpłać zadatek
+        ZAREZERWUJ SWÓJ TERMIN
       </Button>
     </form>
   );

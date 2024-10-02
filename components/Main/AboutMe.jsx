@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import classes from "./AboutMe.module.scss";
-import foto from "../../assets/image/photovoltaic-system_640.jpg";
+import foto from "../../assets/image/sonel2.png";
 import Link from "next/link";
 
 const AboutMe = () => {
@@ -26,8 +26,7 @@ const AboutMe = () => {
             </li>
             <li>
               <strong>Pomiary elektryczne:</strong> okresowe pomiary kontrolne
-              instalacji elektrycznych, pomiary rezystancji izolacji, pomiary
-              impedancji pętli zwarcia.
+              instalacji elektrycznych.
             </li>
             <li>
               <strong>Przeglądy instalacji elektrycznych:</strong> okresowe
@@ -44,7 +43,7 @@ const AboutMe = () => {
             wykonanie zleceń. Zapraszamy do skorzystania z naszej oferty!
           </p>
           <p className={classes.signature}>Grzegorz Banach</p>
-          <Link href="/about" className={classes.link}>
+          <Link href="/technologie" className={classes.link}>
             <button className={classes.exploreButton}>
               <svg
                 viewBox="0 0 24 24"

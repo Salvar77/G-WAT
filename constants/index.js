@@ -97,7 +97,7 @@ const priceList = [
 const contactInfo = {
   title: "Kontakt",
   address: {
-    street: "Stefana Okrzei 21",
+    street: "Stefana Okrzei 11/9",
     city: "46-020 Opole",
   },
   phone: {
@@ -106,7 +106,7 @@ const contactInfo = {
   },
   email: {
     icon: mail,
-    address: "banach@sunlight-com.net",
+    address: "banach@g-wat.pl",
   },
 };
 

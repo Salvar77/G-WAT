@@ -58,7 +58,7 @@ const Hero = ({
           <h1 className={classes.hero__title}>
             {title}{" "}
             {showTechnology && (
-              <span className={classes.hero__titleSpan}>WATT</span>
+              <span className={classes.hero__titleSpan}>WAT</span>
             )}
           </h1>
           <p>{description}</p>

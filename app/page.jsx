@@ -16,7 +16,7 @@ export default function Home() {
         heroImageMobile={heroImageMobile}
         heroImageDesktop={heroImageDesktop}
         title="G-"
-        description="Usługi elektryczne"
+        description="Pomiary elektryczne"
         showTechnology={true}
         showButton={true}
         height="100vh"
