@@ -33,10 +33,17 @@ export const POST = async (req) => {
     return new Response("Brakujące dane w metadanych", { status: 400 });
   }
 
-  const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
-  const serviceAccountKey = JSON.parse(
-    await fs.readFile(serviceAccountKeyPath, "utf-8")
-  );
+  let serviceAccountKey;
+  if (process.env.NODE_ENV === "production") {
+    // W produkcji użyj zmiennej środowiskowej jako stringa
+    serviceAccountKey = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+  } else {
+    // W lokalnym środowisku wczytaj z pliku
+    const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
+    serviceAccountKey = JSON.parse(
+      await fs.readFile(serviceAccountKeyPath, "utf-8")
+    );
+  }
 
   const auth = new google.auth.GoogleAuth({
     credentials: serviceAccountKey,
@@ -127,11 +134,6 @@ export const POST = async (req) => {
       status: 500,
     });
   }
-  // }
 
   return new Response(JSON.stringify({ received: true }), { status: 200 });
-  // } catch (err) {
-  //   console.error("Błąd webhooka Stripe:", err);
-  //   return new Response("Webhook Error", { status: 400 });
-  // }
 };
