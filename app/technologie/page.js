@@ -31,8 +31,8 @@ const About = () => {
           <Image src={foto5} alt="Certyfikowane Technologie" />
           <Image src={foto6} alt="Certyfikowane Technologie" />
           <Image src={foto4} alt="Certyfikowane Technologie" />
-          <Image src={foto9} alt="Certyfikowane Technologie" />
           <Image src={foto7} alt="Certyfikowane Technologie" />
+          <Image src={foto9} alt="Certyfikowane Technologie" />
           <Image src={foto} alt="Certyfikowane Technologie" />
         </div>
         <h2 className={classes.about__header}>Nasze Technologie</h2>
@@ -85,9 +85,7 @@ const About = () => {
           <li>Deye - czekam na potwierdzenie</li>
           <li>Solplanet - czekam na potwierdzenie</li>
         </ul>
-        <div className={classes.about__images}>
-          <Image src={foto3} alt="Certyfikowane Technologie" />
-        </div>
+
         <ul className={classes.certificatesList}>
           <h3>Certyfikaty magazynów energii:</h3>
           <li>
@@ -130,8 +128,10 @@ const About = () => {
         </ul>
 
         <p className={classes.signature}>Grzegorz Banach</p>
-        <div className={classes.about__images}>
+        <div className={classes.about__image}>
           <Image src={foto2} alt="Certyfikowane Technologie" />
+
+          <Image src={foto3} alt="Certyfikowane Technologie" />
         </div>
       </div>
     </section>
