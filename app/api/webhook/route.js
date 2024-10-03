@@ -33,12 +33,6 @@ export const POST = async (req) => {
     return new Response("Brakujące dane w metadanych", { status: 400 });
   }
 
-  let serviceAccountKey = process.env.GOOGLE_SERVICE_ACCOUNT_KEY
-    ? JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY)
-    : JSON.parse(
-        await fs.readFile(process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH, "utf-8")
-      );
-
   // let serviceAccountKey;
   // if (process.env.NODE_ENV === "production") {
   //   console.log(
@@ -55,6 +49,13 @@ export const POST = async (req) => {
   //   );
   // }
 
+  // Użycie klucza z ENV
+  let serviceAccountKey = process.env.GOOGLE_SERVICE_ACCOUNT_KEY
+    ? JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY)
+    : JSON.parse(
+        await fs.readFile(process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH, "utf-8")
+      );
+
   const auth = new google.auth.GoogleAuth({
     credentials: serviceAccountKey,
     scopes: ["https://www.googleapis.com/auth/calendar"],
@@ -62,18 +63,48 @@ export const POST = async (req) => {
 
   const calendar = google.calendar({ version: "v3", auth });
 
+  // 1. Pobieranie istniejących wydarzeń z Google Calendar dla danego dnia
+  const startTime = new Date(selectedDate).toISOString();
+  const endTime = new Date(
+    new Date(selectedDate).getTime() + 60 * 60 * 1000
+  ).toISOString();
+
+  const events = await calendar.events.list({
+    calendarId: process.env.EMAIL_USER,
+    timeMin: startTime,
+    timeMax: endTime,
+    singleEvents: true,
+    orderBy: "startTime",
+  });
+
+  const conflictingEvent = events.data.items.find((event) => {
+    const eventStart = new Date(event.start.dateTime);
+    const eventEnd = new Date(event.end.dateTime);
+    return new Date(startTime) < eventEnd && new Date(endTime) > eventStart;
+  });
+
+  // 2. Sprawdzenie czy istnieje konflikt w czasie
+  if (conflictingEvent) {
+    return new Response(
+      JSON.stringify({
+        message: "Termin jest już zarezerwowany.",
+        conflictingEvent,
+      }),
+      { status: 400 }
+    );
+  }
+
+  // 3. Dodanie wydarzenia, jeśli termin jest dostępny
   const event = {
     summary: `Spotkanie z ${name}`,
     location: "Online",
     description: `Spotkanie z klientem ${name} (${email})\nNumer telefonu: ${phone}`,
     start: {
-      dateTime: new Date(selectedDate).toISOString(),
+      dateTime: startTime,
       timeZone: "Europe/Warsaw",
     },
     end: {
-      dateTime: new Date(
-        new Date(selectedDate).getTime() + 60 * 60 * 1000
-      ).toISOString(),
+      dateTime: endTime,
       timeZone: "Europe/Warsaw",
     },
   };
@@ -145,5 +176,8 @@ export const POST = async (req) => {
     });
   }
 
-  return new Response(JSON.stringify({ received: true }), { status: 200 });
+  return new Response(
+    JSON.stringify({ message: "Rezerwacja udana", event: response.data }),
+    { status: 200 }
+  );
 };

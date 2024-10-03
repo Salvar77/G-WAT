@@ -128,6 +128,7 @@ const BookingForm = ({ selectedDate }) => {
             ampm={false}
             minTime={minTime}
             maxTime={maxTime}
+            minutesStep={15}
           />
         </LocalizationProvider>
       </div>
