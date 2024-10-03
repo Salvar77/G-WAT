@@ -33,21 +33,27 @@ export const POST = async (req) => {
     return new Response("Brakujące dane w metadanych", { status: 400 });
   }
 
-  let serviceAccountKey;
-  if (process.env.NODE_ENV === "production") {
-    console.log(
-      "GOOGLE_SERVICE_ACCOUNT_KEY:",
-      process.env.GOOGLE_SERVICE_ACCOUNT_KEY
-    );
-    // W produkcji użyj zmiennej środowiskowej jako stringa
-    serviceAccountKey = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
-  } else {
-    // W lokalnym środowisku wczytaj z pliku
-    const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
-    serviceAccountKey = JSON.parse(
-      await fs.readFile(serviceAccountKeyPath, "utf-8")
-    );
-  }
+  let serviceAccountKey = process.env.GOOGLE_SERVICE_ACCOUNT_KEY
+    ? JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY)
+    : JSON.parse(
+        await fs.readFile(process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH, "utf-8")
+      );
+
+  // let serviceAccountKey;
+  // if (process.env.NODE_ENV === "production") {
+  //   console.log(
+  //     "GOOGLE_SERVICE_ACCOUNT_KEY:",
+  //     process.env.GOOGLE_SERVICE_ACCOUNT_KEY
+  //   );
+  //   // W produkcji użyj zmiennej środowiskowej jako stringa
+  //   serviceAccountKey = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+  // } else {
+  //   // W lokalnym środowisku wczytaj z pliku
+  //   const serviceAccountKeyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
+  //   serviceAccountKey = JSON.parse(
+  //     await fs.readFile(serviceAccountKeyPath, "utf-8")
+  //   );
+  // }
 
   const auth = new google.auth.GoogleAuth({
     credentials: serviceAccountKey,
