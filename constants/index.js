@@ -98,7 +98,7 @@ const contactInfo = {
   title: "Kontakt",
   address: {
     street: "Stefana Okrzei 11/9",
-    city: "46-020 Opole",
+    city: "45-713 Opole",
   },
   phone: {
     icon: phone,
