@@ -18,16 +18,22 @@ import foto3 from "../../assets/image/mierniki2.png";
 import foto4 from "../../assets/image/acc.jpg";
 import foto5 from "../../assets/image/acc1.jpg";
 import foto6 from "../../assets/image/acc2.jpg";
+import foto7 from "../../assets/image/acc3.jpg";
+import foto8 from "../../assets/image/acc4.jpg";
+import foto9 from "../../assets/image/sonel6.jpg";
 
 const About = () => {
   return (
     <section id="about" className={classes.about}>
       <div className={classes.about__box}>
         <div className={classes.about__images}>
-          <Image src={foto} alt="Certyfikowane Technologie" />
-          <Image src={foto4} alt="Certyfikowane Technologie" />
+          <Image src={foto8} alt="Certyfikowane Technologie" />
           <Image src={foto5} alt="Certyfikowane Technologie" />
           <Image src={foto6} alt="Certyfikowane Technologie" />
+          <Image src={foto4} alt="Certyfikowane Technologie" />
+          <Image src={foto9} alt="Certyfikowane Technologie" />
+          <Image src={foto7} alt="Certyfikowane Technologie" />
+          <Image src={foto} alt="Certyfikowane Technologie" />
         </div>
         <h2 className={classes.about__header}>Nasze Technologie</h2>
       </div>
@@ -79,7 +85,7 @@ const About = () => {
           <li>Deye - czekam na potwierdzenie</li>
           <li>Solplanet - czekam na potwierdzenie</li>
         </ul>
-        <div className={classes.about__image}>
+        <div className={classes.about__images}>
           <Image src={foto3} alt="Certyfikowane Technologie" />
         </div>
         <ul className={classes.certificatesList}>
@@ -124,7 +130,7 @@ const About = () => {
         </ul>
 
         <p className={classes.signature}>Grzegorz Banach</p>
-        <div className={classes.about__image}>
+        <div className={classes.about__images}>
           <Image src={foto2} alt="Certyfikowane Technologie" />
         </div>
       </div>

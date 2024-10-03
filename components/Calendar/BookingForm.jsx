@@ -15,11 +15,11 @@ const BookingForm = ({ selectedDate }) => {
   const [selectedTime, setSelectedTime] = useState(dayjs());
   const [disabledTimes, setDisabledTimes] = useState([]);
 
-  const minTime = dayjs().hour(9).minute(0);
-  const maxTime = dayjs().hour(17).minute(0);
+  // const minTime = dayjs().hour(9).minute(0);
+  // const maxTime = dayjs().hour(17).minute(0);
 
+  // Pobierz zajęte godziny z Google Calendar po wybraniu daty
   useEffect(() => {
-    // Pobierz zajęte godziny z Google Calendar po wybraniu daty
     if (selectedDate) {
       fetch(
         `/api/fetchEvents?startDate=${selectedDate}&endDate=${selectedDate}`
@@ -27,30 +27,32 @@ const BookingForm = ({ selectedDate }) => {
         .then((res) => res.json())
         .then((data) => {
           const bookedTimes = data.events.map((event) => ({
-            start: new Date(event.start.dateTime),
-            end: new Date(event.end.dateTime),
+            start: dayjs(event.start.dateTime),
+            end: dayjs(event.end.dateTime),
           }));
           setDisabledTimes(bookedTimes);
+        })
+        .catch((error) => {
+          console.error("Błąd podczas pobierania wydarzeń:", error);
         });
     }
   }, [selectedDate]);
 
-  const isTimeDisabled = (time) => {
-    // Sprawdzenie, czy godzina jest zajęta
-    return disabledTimes.some(
-      ({ start, end }) =>
-        time.isAfter(dayjs(start)) && time.isBefore(dayjs(end))
-    );
+  const shouldDisableTime = (time, view) => {
+    // Sprawdzamy czy godzina lub minuta jest zablokowana
+    return disabledTimes.some(({ start, end }) => {
+      if (view === "hours") {
+        return time.isBetween(start, end, "hour", "[)");
+      }
+      if (view === "minutes") {
+        return time.isBetween(start, end, "minute", "[)");
+      }
+      return false;
+    });
   };
 
-  // Sprawdza, czy wybrana godzina powinna być zablokowana
   const handleTimeChange = (newTime) => {
-    if (isTimeDisabled(newTime)) {
-      alert("Ta godzina jest już zarezerwowana.");
-      setSelectedTime(null); // Resetowanie wybranej godziny, jeśli jest zajęta
-    } else {
-      setSelectedTime(newTime); // Ustawianie nowego czasu, jeśli jest dostępny
-    }
+    setSelectedTime(newTime); // Nie blokujemy tutaj wybranej godziny, tylko w pickerze
   };
 
   const handleChange = (e) => {
@@ -147,24 +149,12 @@ const BookingForm = ({ selectedDate }) => {
           <TimePicker
             label="Wybierz godzinę"
             value={selectedTime}
-            onChange={handleTimeChange} // Sprawdzanie czy wybrana godzina jest dostępna
+            onChange={handleTimeChange}
             ampm={false}
-            minTime={minTime}
-            maxTime={maxTime}
-            minutesStep={15}
-            shouldDisableTime={(value, view) => {
-              if (view === "hours") {
-                return disabledTimes.some(({ start, end }) =>
-                  value.isBetween(dayjs(start), dayjs(end), "hour", "[)")
-                );
-              }
-              if (view === "minutes") {
-                return disabledTimes.some(({ start, end }) =>
-                  value.isBetween(dayjs(start), dayjs(end), "minute", "[)")
-                );
-              }
-              return false;
-            }}
+            // minTime={minTime}
+            // maxTime={maxTime}
+            minutesStep={30}
+            shouldDisableTime={shouldDisableTime}
           />
         </LocalizationProvider>
       </div>
