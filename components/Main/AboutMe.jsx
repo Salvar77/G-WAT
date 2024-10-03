@@ -20,22 +20,18 @@ const AboutMe = () => {
           </p>
           <ul className={classes.servicesList}>
             <li>
+              <strong>Pomiary elektryczne:</strong> okresowe pomiary kontrolne
+              instalacji elektrycznych.
+            </li>
+            <li>
               <strong>Instalacje elektryczne:</strong> montaż, wymiana,
               rozbudowa i naprawa instalacji elektrycznych w budynkach
               mieszkalnych, biurowych i przemysłowych.
             </li>
             <li>
-              <strong>Pomiary elektryczne:</strong> okresowe pomiary kontrolne
-              instalacji elektrycznych.
-            </li>
-            <li>
               <strong>Przeglądy instalacji elektrycznych:</strong> okresowe
               przeglądy instalacji elektrycznych w celu zapewnienia
               bezpieczeństwa użytkowania.
-            </li>
-            <li>
-              <strong>Drobne naprawy elektryczne:</strong> wymiana gniazdek i
-              włączników, naprawa oświetlenia, usuwanie awarii elektrycznych.
             </li>
           </ul>
           <p className={classes.offer}>
