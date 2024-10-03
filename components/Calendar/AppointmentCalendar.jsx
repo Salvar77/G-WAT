@@ -15,12 +15,22 @@ const AppointmentCalendar = ({ onDateChange }) => {
     onDateChange(newDate);
   };
 
+  const disableWeekDays = ({ date }) => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  };
+
   return (
     <div className={classes.appointmentCalendar}>
       <h2 className={classes.appointmentCalendar__h2}>
         Wybierz termin spotkania
       </h2>
-      <Calendar onChange={handleDateChange} value={date} locale="pl-PL" />
+      <Calendar
+        onChange={handleDateChange}
+        value={date}
+        locale="pl-PL"
+        tileDisabled={disableWeekDays}
+      />
       <p>Wybrany termin: {dayjs(date).format("dddd, D MMMM YYYY")}</p>
     </div>
   );
