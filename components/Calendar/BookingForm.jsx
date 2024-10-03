@@ -11,22 +11,47 @@ dayjs.locale("pl");
 
 const BookingForm = ({ selectedDate }) => {
   const router = useRouter();
-  const [isMounted, setIsMounted] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [selectedTime, setSelectedTime] = useState(dayjs());
+  const [disabledTimes, setDisabledTimes] = useState([]);
 
   const minTime = dayjs().hour(9).minute(0);
   const maxTime = dayjs().hour(17).minute(0);
 
-  const isTimeValid = (time) => {
-    if (!time) return false;
-    return time.isAfter(minTime) && time.isBefore(maxTime);
+  useEffect(() => {
+    // Pobierz zajęte godziny z Google Calendar po wybraniu daty
+    if (selectedDate) {
+      fetch(
+        `/api/fetchEvents?startDate=${selectedDate}&endDate=${selectedDate}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          const bookedTimes = data.events.map((event) => ({
+            start: new Date(event.start.dateTime),
+            end: new Date(event.end.dateTime),
+          }));
+          setDisabledTimes(bookedTimes);
+        });
+    }
+  }, [selectedDate]);
+
+  const isTimeDisabled = (time) => {
+    // Sprawdzenie, czy godzina jest zajęta
+    return disabledTimes.some(
+      ({ start, end }) =>
+        time.isAfter(dayjs(start)) && time.isBefore(dayjs(end))
+    );
   };
 
-  useEffect(() => {
-    setIsMounted(true);
-    return () => setIsMounted(false); // Czyszczenie flagi przy odmontowywaniu
-  }, []);
+  // Sprawdza, czy wybrana godzina powinna być zablokowana
+  const handleTimeChange = (newTime) => {
+    if (isTimeDisabled(newTime)) {
+      alert("Ta godzina jest już zarezerwowana.");
+      setSelectedTime(null); // Resetowanie wybranej godziny, jeśli jest zajęta
+    } else {
+      setSelectedTime(newTime); // Ustawianie nowego czasu, jeśli jest dostępny
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -64,9 +89,7 @@ const BookingForm = ({ selectedDate }) => {
       });
 
       if (response.ok) {
-        if (isMounted) {
-          router.push("/sukces");
-        }
+        router.push("/sukces");
       } else {
         const error = await response.json();
         alert("Wystąpił błąd: " + error.message);
@@ -124,11 +147,24 @@ const BookingForm = ({ selectedDate }) => {
           <TimePicker
             label="Wybierz godzinę"
             value={selectedTime}
-            onChange={setSelectedTime}
+            onChange={handleTimeChange} // Sprawdzanie czy wybrana godzina jest dostępna
             ampm={false}
             minTime={minTime}
             maxTime={maxTime}
             minutesStep={15}
+            shouldDisableTime={(value, view) => {
+              if (view === "hours") {
+                return disabledTimes.some(({ start, end }) =>
+                  value.isBetween(dayjs(start), dayjs(end), "hour", "[)")
+                );
+              }
+              if (view === "minutes") {
+                return disabledTimes.some(({ start, end }) =>
+                  value.isBetween(dayjs(start), dayjs(end), "minute", "[)")
+                );
+              }
+              return false;
+            }}
           />
         </LocalizationProvider>
       </div>
