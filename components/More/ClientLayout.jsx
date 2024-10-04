@@ -27,6 +27,7 @@ export default function ClientLayout({ children }) {
 
   return (
     <>
+      <Logo showLogo={logo}></Logo>
       <Nav isOpen={isOpen} toggleNav={toggleNav} />
       <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
       {children}
