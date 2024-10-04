@@ -39,23 +39,25 @@ const AboutMe = () => {
             wykonanie zleceń. Zapraszamy do skorzystania z naszej oferty!
           </p>
           <p className={classes.signature}>Grzegorz Banach</p>
-          <Link href="/technologie" className={classes.link}>
-            <button className={classes.exploreButton}>
-              <svg
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                stroke="currentColor"
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-              Tech
-            </button>
-          </Link>
+          <div className={classes.buttonWrapper}>
+            <Link href="/technologie" className={classes.link}>
+              <button className={classes.exploreButton}>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Technologie
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@
   padding: 4rem 2rem;
   text-align: center;
   background-color: $white-smooth;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 
   h2 {
     color: $main-gray;
@@ -30,8 +31,18 @@
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: $dark-smooth;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .technologies {
+    .technology {
+      p {
+        font-size: 1.7rem;
+      }
     }
   }
 }
@@ -47,6 +58,10 @@
 
     .technology {
       flex-basis: 20%;
+
+      p {
+        font-size: 1.8rem;
+      }
 
       .icon {
         font-size: 6rem;

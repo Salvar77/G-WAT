@@ -7,6 +7,7 @@
   justify-content: center;
   flex-direction: column;
   color: $grey-smooth-2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     150deg,
     $light-gray,
@@ -40,11 +41,16 @@
   padding: 2rem;
 }
 
+.buttonWrapper {
+  text-align: center;
+}
+
 .link {
   display: flex;
   justify-content: center;
   text-decoration: none;
   padding-top: 1.8rem;
+  display: inline-block;
 }
 
 .exploreButton {
@@ -58,7 +64,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  color: #7e97b8;
+  color: $green8;
   background-color: #e0e8ef;
   border-style: solid;
   border-width: 2px;
@@ -75,7 +81,7 @@
   }
 
   &:hover {
-    color: #516d91;
+    color: $green2;
     background-color: #e5edf5;
     box-shadow: -2px -1px 8px 0px #ffffff,
       2px 1px 8px 0px rgba(95, 157, 231, 0.48);
@@ -106,8 +112,12 @@
 .signature {
   margin-top: 1rem;
   font-weight: bold;
-  font-size: 1.2rem;
+
   color: $green2;
+}
+
+.offer {
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {

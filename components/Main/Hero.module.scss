@@ -88,10 +88,12 @@
   background-color: $white-smooth;
   box-shadow: 0.2rem 0.4rem 0.6rem rgba(56, 201, 34, 0.2);
   text-decoration: none;
+  transition: 0.3s;
 
   &:hover {
-    box-shadow: 0.5rem 0.8rem 1rem rgba(14, 136, 160, 0.4),
-      0 0 1rem rgba(168, 67, 49, 0.5);
+    color: $green2;
+    box-shadow: 0.5rem 0.8rem 1rem rgba(160, 92, 14, 0.4),
+      0 0 1rem rgba(220, 94, 15, 0.5);
     transform: scale(1.05);
   }
 }

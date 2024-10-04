@@ -95,7 +95,7 @@ const PriceList = () => {
                       <div key={idx} className={styles.pricingType}>
                         <h4 className={styles.regionName}>{region.region}</h4>
                         <p className={styles.pricingText}>
-                          Brutto:{" "}
+                          Cena:{" "}
                           <span className={styles.priceValue}>
                             {region.priceBrutto}
                           </span>

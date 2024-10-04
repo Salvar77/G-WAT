@@ -34,12 +34,12 @@ const priceList = [
     regions: [
       {
         region: "opolskie",
-        priceBrutto: "800 zł",
-        priceNetto: "732 zł",
+        priceBrutto: "do negocjacji",
+        // priceNetto: "732 zł",
       },
       {
         region: "śląskie / dolnośląskie",
-        priceBrutto: "950 zł",
+        priceBrutto: "do negocjacji",
         priceNetto: null,
       },
     ],
@@ -58,12 +58,12 @@ const priceList = [
     regions: [
       {
         region: "opolskie",
-        priceBrutto: "1000 zł",
+        priceBrutto: "do negocjacji",
         priceNetto: null,
       },
       {
         region: "śląskie / dolnośląskie",
-        priceBrutto: "1150 zł",
+        priceBrutto: "do negocjacji",
         priceNetto: null,
       },
     ],
@@ -81,12 +81,12 @@ const priceList = [
     regions: [
       {
         region: "Cała Polska",
-        priceBrutto: "15 zł netto za punkt przyłącza",
+        priceBrutto: "do negocjacji",
         priceNetto: null,
       },
       {
         region: "Rezystancja uziemienia",
-        priceBrutto: "500 zł netto",
+        priceBrutto: "do negocjacji",
         priceNetto: null,
       },
     ],

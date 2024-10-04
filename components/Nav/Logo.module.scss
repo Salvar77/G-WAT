@@ -1,1 +1,26 @@
 @import "../../styles/colors";
+
+.logo {
+  position: fixed;
+  top: -5rem;
+  left: -4rem;
+  z-index: 10000;
+
+  img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    position: fixed;
+    left: 4rem;
+    top: -5rem;
+
+    img {
+      height: 20rem;
+      width: 20rem;
+    }
+  }
+}

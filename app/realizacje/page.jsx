@@ -42,7 +42,6 @@ const Realizations = () => {
         heroImageMobile={galleryHeroImageMobile}
         heroImageDesktop={galleryHeroImageDesktop}
         title="Galeria"
-        description="Wykonane zlecenia"
         showTechnology={false}
         showButton={false}
         height="66vh"
