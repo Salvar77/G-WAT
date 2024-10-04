@@ -8,25 +8,22 @@
     $white-smooth,
     $white-smooth
   );
+  width: 100%; // Zajmuje całą szerokość strony
+
+  &__background {
+    width: 100%;
+  }
 
   &__header {
     text-align: center;
   }
 
-  &__image {
-    display: flex;
-    flex-direction: column;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // width: 100%;
+    width: 100%; // Pełna szerokość kontenera, ograniczenie poniżej
   }
 
   &__images {
@@ -36,12 +33,22 @@
     align-items: center;
     gap: 1rem;
     padding: 2.5rem;
+
     img {
       height: 100%;
       width: 100%;
-
       object-fit: cover;
       border-radius: 0.4rem;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -67,6 +74,7 @@
   h3 {
     padding-bottom: 2rem;
   }
+
   li {
     list-style: none;
   }
@@ -75,6 +83,10 @@
 .signature {
   margin: 2rem;
   color: $green2;
+}
+
+.hideMobile {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -87,8 +99,14 @@
 
 @media (min-width: 992px) {
   .about {
-    max-width: 1200px;
-    margin: 0 auto;
+    // usuwamy ograniczenie szerokości, by tło miało pełną szerokość
+    max-width: none;
+    margin: 0;
+
+    &__container {
+      max-width: 1200px; // Ograniczamy szerokość treści
+      margin: 0 auto; // Wyśrodkowanie treści
+    }
 
     &__image {
       display: flex;
@@ -102,7 +120,7 @@
     &__images {
       img {
         width: 30%;
-        height: 10vh;
+        height: 15vh;
         object-fit: contain;
       }
     }
@@ -130,5 +148,9 @@
         margin-top: 2rem;
       }
     }
+  }
+
+  .hideMobile {
+    display: block;
   }
 }
