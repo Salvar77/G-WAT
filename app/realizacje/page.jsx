@@ -9,31 +9,44 @@ import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/hero3_640.jpg";
 import photo3 from "../../assets/image/hero1_640.jpg";
 import photo4 from "../../assets/image/hero_640.jpg";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import Image from "next/image";
 
+// Update your images with width and height properties
 const allImages = [
-  { src: photo1, alt: "Photo 1" },
-  { src: photo2, alt: "Photo 2" },
-  { src: photo3, alt: "Photo 3" },
-  { src: photo4, alt: "Photo 4" },
-  { src: photo1, alt: "Photo 1" },
-  { src: photo2, alt: "Photo 2" },
-  { src: photo3, alt: "Photo 3" },
-  { src: photo4, alt: "Photo 4" },
+  { src: photo1, alt: "Photo 1", width: 640, height: 427 },
+  { src: photo2, alt: "Photo 2", width: 640, height: 427 },
+  { src: photo3, alt: "Photo 3", width: 640, height: 427 },
+  { src: photo4, alt: "Photo 4", width: 640, height: 427 },
+  { src: photo1, alt: "Photo 1", width: 640, height: 427 },
+  { src: photo2, alt: "Photo 2", width: 640, height: 427 },
+  { src: photo3, alt: "Photo 3", width: 640, height: 427 },
+  { src: photo4, alt: "Photo 4", width: 640, height: 427 },
 ];
 
 const Realizations = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (image) => {
-    setCurrentImage(image);
+  const openModal = (index) => {
+    setCurrentIndex(index);
     setIsOpen(true);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    setCurrentImage(null);
+  };
+
+  const goToNextImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === allImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPreviousImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -50,34 +63,47 @@ const Realizations = () => {
       <div className={classes.grid}>
         {allImages.map((image, index) => (
           <div
-            onClick={() => openModal(image.src)}
+            onClick={() => openModal(index)}
             key={index}
             className={classes.gridItem}
           >
-            <Image src={image.src} alt={image.alt} layout="responsive" />
+            {/* Provide width and height here */}
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              layout="responsive"
+            />
           </div>
         ))}
       </div>
 
-      {currentImage && (
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={closeModal}
-          className={classes.modal}
-          overlayClassName={classes.overlay}
-        >
-          <div className={classes.modalContent}>
-            <div className={classes.imageContainer}>
-              <Image
-                src={currentImage}
-                alt="Powiększone zdjęcie"
-                layout="responsive"
-                objectFit="contain"
-              />
-            </div>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        className={classes.modal}
+        overlayClassName={classes.overlay}
+      >
+        <div className={classes.modalContent}>
+          <div className={classes.imageContainer}>
+            <Image
+              src={allImages[currentIndex].src}
+              alt={allImages[currentIndex].alt}
+              width={allImages[currentIndex].width}
+              height={allImages[currentIndex].height}
+              layout="responsive"
+              objectFit="contain"
+            />
           </div>
-        </Modal>
-      )}
+          <button className={classes.prevButton} onClick={goToPreviousImage}>
+            <FaArrowCircleLeft />
+          </button>
+          <button className={classes.nextButton} onClick={goToNextImage}>
+            <FaArrowCircleRight />
+          </button>
+        </div>
+      </Modal>
     </section>
   );
 };
