@@ -31,7 +31,7 @@
       li {
         border: 1px solid black;
         margin: 1rem;
-        background-color: $green8;
+        background-color: $dark-gray;
         border-radius: 0.4rem;
 
         a {
@@ -93,7 +93,7 @@
     justify-content: flex-end;
     transform: none;
     top: 0;
-    background-color: rgba($green8, 0.9);
+    background-color: rgba($dark-gray, 0.9);
     z-index: 1000;
 
     &::before,

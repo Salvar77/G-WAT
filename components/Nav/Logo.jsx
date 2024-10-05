@@ -1,6 +1,6 @@
 import classes from "./Logo.module.scss";
 import Image from "next/image";
-import logo from "../../assets/image/g-wat_transparent.png";
+import logo from "../../assets/image/g-wat4-transparent.png";
 
 const Logo = ({ showLogo }) => {
   // const logoStyle = {
