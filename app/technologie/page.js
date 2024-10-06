@@ -38,7 +38,9 @@ const About = () => {
         // description="Wykonane zlecenia"
         showTechnology={false}
         showButton={false}
-        height="50vh"
+        height="66vh"
+        mobileWhiteBlockColor="disable"
+        desktopWhiteBlockColor="disable"
       />
       <div className={classes.about__container}>
         <div className={classes.about__box}>
@@ -77,6 +79,7 @@ const About = () => {
             precyzyjnych pomiarów modułów fotowoltaicznych oraz falowników.
             Obsługujemy między innymi:
           </p>
+
           <ul className={classes.deviceList}>
             <li>
               <span className={classes.deviceText}>Huawei</span>
@@ -158,13 +161,17 @@ const About = () => {
 
           <p className={classes.signature}>Grzegorz Banach</p>
         </div>
+      </div>
 
+      <div className={classes.imageWrapper}>
         <div className={classes.about__image}>
           <Image src={foto12} alt="Certyfikowane Technologie" />
           <Image src={foto11} alt="Certyfikowane Technologie" />
           <Image src={foto13} alt="Certyfikowane Technologie" />
           <Image src={foto10} alt="Certyfikowane Technologie" />
         </div>
+      </div>
+      <div className={classes.imageWrapperTwo}>
         <div className={classes.about__image}>
           <Image src={foto2} alt="Certyfikowane Technologie" />
           <Image src={foto3} alt="Certyfikowane Technologie" />

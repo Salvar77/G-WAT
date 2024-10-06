@@ -51,6 +51,7 @@
     img {
       height: 100%;
       width: 100%;
+
       object-fit: contain;
       border-radius: 0.4rem;
     }
@@ -60,6 +61,30 @@
     padding: 2rem;
     list-style: none;
   }
+}
+
+.imageWrapper {
+  width: 100%;
+  background: linear-gradient(50deg, $white-smooth, $white-smooth, $light-gray);
+  display: flex;
+  justify-content: center;
+  background-color: $light-gray;
+  align-items: center;
+  padding: 2rem;
+}
+.imageWrapperTwo {
+  width: 100%;
+  background: linear-gradient(
+    210deg,
+    $white-smooth,
+    $white-smooth,
+    $light-gray
+  );
+  display: flex;
+  justify-content: center;
+  background-color: $light-gray;
+  align-items: center;
+  padding: 2rem;
 }
 
 .deviceText {
@@ -136,6 +161,8 @@
     &__image {
       display: flex;
       flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
       img {
         width: calc(33% - 1rem);
       }
@@ -152,5 +179,9 @@
 
   .hideMobile {
     display: block;
+  }
+
+  .signature {
+    font-size: 2rem;
   }
 }

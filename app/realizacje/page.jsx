@@ -58,6 +58,8 @@ const Realizations = () => {
         showTechnology={false}
         showButton={false}
         height="66vh"
+        mobileWhiteBlockColor="disable"
+        desktopWhiteBlockColor="disable"
       />
       <h1 className={classes.title}>Realizacje</h1>
       <div className={classes.grid}>

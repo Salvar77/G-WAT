@@ -1,0 +1,38 @@
+@import "../../styles/colors";
+
+.imageGalleryWrapper {
+  width: 100vw; /* Ustaw pełną szerokość widoku ekranu */
+  position: relative;
+  background-color: #f0f0f0; /* Twój kolor tła */
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageGallery img {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .imageGallery {
+    flex-direction: row;
+  }
+  .imageGallery img {
+    width: calc(33% - 1rem);
+  }
+}

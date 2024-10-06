@@ -20,6 +20,8 @@ export default function Home() {
         showTechnology={true}
         showButton={true}
         height="100vh"
+        mobileWhiteBlockColor="#C8C8C8"
+        desktopWhiteBlockColor="#e0e0e0"
       />
       <AboutMe />
       <Technologies />

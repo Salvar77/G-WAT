@@ -1,3 +1,5 @@
+@import "../styles/colors";
+
 *,
 *::before,
 *::after {
@@ -16,6 +18,26 @@ body {
   font-family: "Prompt", sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
+}
+
+.whiteBlock {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+  background: $white-smooth;
+  transform: skew(45deg);
+  z-index: 3;
+
+  &Left {
+    bottom: 0;
+    left: -50px;
+  }
+
+  &Right {
+    top: 0;
+    right: -50px;
+    transform: skew(45deg);
+  }
 }
 
 // .container {

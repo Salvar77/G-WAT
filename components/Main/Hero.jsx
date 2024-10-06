@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import classes from "./Hero.module.scss";
 
@@ -13,9 +12,12 @@ const Hero = ({
   showTechnology,
   showButton,
   height = "100vh",
+  mobileWhiteBlockColor = "#1D120C",
+  desktopWhiteBlockColor = "#C8C8C8",
 }) => {
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
   const [viewportHeight, setViewportHeight] = useState(null);
+  const [whiteBlockColor, setWhiteBlockColor] = useState(mobileWhiteBlockColor);
 
   useEffect(() => {
     const updateHeroHeight = () => {
@@ -32,6 +34,9 @@ const Hero = ({
     const mediaQuery = window.matchMedia("(min-width: 992px)");
     const handleMediaQueryChange = (e) => {
       setCurrentImage(e.matches ? heroImageDesktop : heroImageMobile);
+      setWhiteBlockColor(
+        e.matches ? desktopWhiteBlockColor : mobileWhiteBlockColor
+      ); // Ustawianie koloru na podstawie zapytania media
     };
 
     mediaQuery.addEventListener("change", handleMediaQueryChange);
@@ -40,15 +45,20 @@ const Hero = ({
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
-  }, [heroImageDesktop, heroImageMobile]);
+  }, [
+    heroImageDesktop,
+    heroImageMobile,
+    mobileWhiteBlockColor,
+    desktopWhiteBlockColor,
+  ]);
 
   return (
     <div>
-      <section id="hero" className={classes.hero} style={{ height: height }}>
+      <section id="hero" className={classes.hero} style={{ height }}>
         <div className={classes.imageContainer}>
           <Image
             src={currentImage}
-            alt="Hero grafika"
+            alt="Hero Image"
             fill={true}
             style={{ objectFit: "cover" }}
             priority
@@ -63,11 +73,15 @@ const Hero = ({
           </h1>
           <p>{description}</p>
           {showButton && (
-            <Link href="#galeria" className={classes.button}>
+            <a href="#galeria" className={classes.button}>
               Realizacje
-            </Link>
+            </a>
           )}
         </div>
+        <div
+          className={`${classes.whiteBlock} ${classes.whiteBlockLeft}`}
+          style={{ backgroundColor: whiteBlockColor }}
+        ></div>
       </section>
     </div>
   );
