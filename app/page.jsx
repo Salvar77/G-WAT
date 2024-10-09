@@ -19,36 +19,7 @@ export default function Home() {
         description="G-WAT Pomiary elektryczne"
         image="https://www.g-wat.pl/g-wat10.png"
       />
-      <NextSeo
-        title="G-WAT Pomiary elektryczne"
-        description="G-WAT Pomiary elektryczne"
-        canonical="https://www.g-wat.pl/"
-        openGraph={{
-          url: "https://www.g-wat.pl/",
-          title: "G-WAT Pomiary elektryczne",
-          description: "G-WAT Pomiary elektryczne",
-          images: [
-            {
-              url: "https://www.g-wat.pl/g-wat10.png",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-          ],
-          site_name: "G-WAT Pomiary elektryczne",
-        }}
-        facebook={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-        instagram={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
+
       <Hero
         heroImageMobile={heroImageMobile}
         heroImageDesktop={heroImageDesktop}
