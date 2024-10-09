@@ -8,14 +8,19 @@ import PriceCardsContainer from "../../components/More/PriceCardContainer";
 
 const PriceList = () => {
   const [activeService, setActiveService] = useState(null);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
+  const [isDesktop, setIsDesktop] = useState(false);
   const contentRefs = useRef(new Map());
   const headerRefs = useRef(new Map());
 
   useEffect(() => {
+    const isClient = typeof window !== "undefined";
+    if (!isClient) return;
+
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 992);
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => {
