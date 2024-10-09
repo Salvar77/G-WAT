@@ -30,6 +30,7 @@ import galleryHeroImageMobile from "../../assets/image/photovoltaic-system_640.j
 import galleryHeroImageDesktop from "../../assets/image/photovoltaic-system_1920.jpg";
 import Hero from "@/components/Main/Hero";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import SEO from "../../components/More/SEO";
 
 const allImages = [
   { src: foto2, alt: "Certyfikowane Technologie" },
@@ -78,211 +79,218 @@ const About = () => {
     );
   };
   return (
-    <section id="about" className={classes.about}>
-      <Hero
-        heroImageMobile={galleryHeroImageMobile}
-        heroImageDesktop={galleryHeroImageDesktop}
-        title="Technologie"
-        // description="Wykonane zlecenia"
-        showTechnology={false}
-        showButton={false}
-        height="66vh"
-        mobileWhiteBlockColor="disable"
-        desktopWhiteBlockColor="disable"
+    <>
+      <SEO
+        title="O nas - Technologie i certyfikaty G-WAT"
+        description="Dowiedz się więcej o technologiach i certyfikatach, które stosujemy w naszych projektach. Poznaj nasze metody pracy i sprzęt, który wykorzystujemy."
+        image="https://www.g-wat.pl/g-wat10.png"
       />
-      <div className={classes.about__container}>
-        <div className={classes.about__box}>
-          <div className={classes.about__images}>
-            <Image src={foto8} alt="Certyfikowane Technologie" />
-            <Image
-              src={foto5}
-              alt="Certyfikowane Technologie"
-              className={classes.hideMobile}
-            />
-            <Image
-              src={foto6}
-              alt="Certyfikowane Technologie"
-              className={classes.hideMobile}
-            />
-            <Image
-              src={foto4}
-              alt="Certyfikowane Technologie"
-              className={classes.hideMobile}
-            />
-            <Image src={foto7} alt="Certyfikowane Technologie" />
-            <Image
-              src={foto9}
-              alt="Certyfikowane Technologie"
-              className={classes.hideMobile}
-            />
-            <Image src={foto} alt="Certyfikowane Technologie" />
+      <section id="about" className={classes.about}>
+        <Hero
+          heroImageMobile={galleryHeroImageMobile}
+          heroImageDesktop={galleryHeroImageDesktop}
+          title="Technologie"
+          // description="Wykonane zlecenia"
+          showTechnology={false}
+          showButton={false}
+          height="66vh"
+          mobileWhiteBlockColor="disable"
+          desktopWhiteBlockColor="disable"
+        />
+        <div className={classes.about__container}>
+          <div className={classes.about__box}>
+            <div className={classes.about__images}>
+              <Image src={foto8} alt="Certyfikowane Technologie" />
+              <Image
+                src={foto5}
+                alt="Certyfikowane Technologie"
+                className={classes.hideMobile}
+              />
+              <Image
+                src={foto6}
+                alt="Certyfikowane Technologie"
+                className={classes.hideMobile}
+              />
+              <Image
+                src={foto4}
+                alt="Certyfikowane Technologie"
+                className={classes.hideMobile}
+              />
+              <Image src={foto7} alt="Certyfikowane Technologie" />
+              <Image
+                src={foto9}
+                alt="Certyfikowane Technologie"
+                className={classes.hideMobile}
+              />
+              <Image src={foto} alt="Certyfikowane Technologie" />
+            </div>
+            <h2 className={classes.about__header}>Nasze Technologie</h2>
           </div>
-          <h2 className={classes.about__header}>Nasze Technologie</h2>
+
+          <div className={classes.about__content}>
+            <p className={classes.deviceInfo}>
+              Wykorzystujemy najnowszy <strong>certyfikowany</strong> miernik{" "}
+              <span className={classes.span}>Sonel MPI-540PV</span> do
+              precyzyjnych pomiarów modułów fotowoltaicznych oraz falowników.
+              Obsługujemy między innymi:
+            </p>
+
+            <ul className={classes.deviceList}>
+              <li>
+                <span className={classes.deviceText}>Huawei</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon} alt="Huawei" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>SolarEdge</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon1} alt="SolarEdge" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>FoxEss</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon4} alt="FoxEss" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>GoodWe</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon3} alt="GoodWe" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>Growatt</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon6} alt="Growatt" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>SunGrow</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon2} alt="SunGrow" width={32} height={32} />
+                </span>
+              </li>
+            </ul>
+
+            <ul className={classes.certificatesList}>
+              <h3>Certyfikaty magazynów energii:</h3>
+              <li>
+                <span className={classes.deviceText}>Huawei</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon} alt="Huawei" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>GoodWe</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon3} alt="GoodWe" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>FoxEss</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon4} alt="FoxEss" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>Growatt</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon6} alt="Growatt" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>Pylontech</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon7} alt="Pylontech" width={32} height={32} />
+                </span>
+              </li>
+              <li>
+                <span className={classes.deviceText}>BYD</span>
+                <span className={classes.deviceIcon}>
+                  <Image src={icon5} alt="BYD" width={32} height={32} />
+                </span>
+              </li>
+            </ul>
+
+            <p className={classes.signature}>Grzegorz Banach</p>
+          </div>
         </div>
 
-        <div className={classes.about__content}>
-          <p className={classes.deviceInfo}>
-            Wykorzystujemy najnowszy <strong>certyfikowany</strong> miernik{" "}
-            <span className={classes.span}>Sonel MPI-540PV</span> do
-            precyzyjnych pomiarów modułów fotowoltaicznych oraz falowników.
-            Obsługujemy między innymi:
-          </p>
-
-          <ul className={classes.deviceList}>
-            <li>
-              <span className={classes.deviceText}>Huawei</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon} alt="Huawei" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>SolarEdge</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon1} alt="SolarEdge" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>FoxEss</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon4} alt="FoxEss" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>GoodWe</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon3} alt="GoodWe" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>Growatt</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon6} alt="Growatt" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>SunGrow</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon2} alt="SunGrow" width={32} height={32} />
-              </span>
-            </li>
-          </ul>
-
-          <ul className={classes.certificatesList}>
-            <h3>Certyfikaty magazynów energii:</h3>
-            <li>
-              <span className={classes.deviceText}>Huawei</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon} alt="Huawei" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>GoodWe</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon3} alt="GoodWe" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>FoxEss</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon4} alt="FoxEss" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>Growatt</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon6} alt="Growatt" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>Pylontech</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon7} alt="Pylontech" width={32} height={32} />
-              </span>
-            </li>
-            <li>
-              <span className={classes.deviceText}>BYD</span>
-              <span className={classes.deviceIcon}>
-                <Image src={icon5} alt="BYD" width={32} height={32} />
-              </span>
-            </li>
-          </ul>
-
-          <p className={classes.signature}>Grzegorz Banach</p>
-        </div>
-      </div>
-
-      <div className={classes.imageWrapper}>
-        <div className={classes.about__image}>
-          <Image
-            src={foto12}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(4)}
-          />
-          <Image
-            src={foto11}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(3)}
-          />
-          <Image
-            src={foto13}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(5)}
-          />
-          <Image
-            src={foto10}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(2)}
-          />
-        </div>
-      </div>
-      <div className={classes.imageWrapperTwo}>
-        <div className={classes.about__image}>
-          <Image
-            src={foto2}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(0)}
-          />
-          <Image
-            src={foto3}
-            alt="Certyfikowane Technologie"
-            onClick={() => openModal(1)}
-          />
-        </div>
-      </div>
-
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        className={classes.modal}
-        overlayClassName={classes.overlay}
-      >
-        <div className={classes.modalContent}>
-          <div className={classes.imageContainer}>
+        <div className={classes.imageWrapper}>
+          <div className={classes.about__image}>
             <Image
-              src={allImages[currentIndex].src}
-              alt={allImages[currentIndex].alt}
-              width={allImages[currentIndex].width}
-              height={allImages[currentIndex].height}
-              layout="responsive"
-              objectFit="contain"
+              src={foto12}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(4)}
+            />
+            <Image
+              src={foto11}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(3)}
+            />
+            <Image
+              src={foto13}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(5)}
+            />
+            <Image
+              src={foto10}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(2)}
             />
           </div>
-          {isMobile && (
-            <>
-              <button
-                className={classes.prevButton}
-                onClick={goToPreviousImage}
-              >
-                <FaArrowCircleLeft />
-              </button>
-              <button className={classes.nextButton} onClick={goToNextImage}>
-                <FaArrowCircleRight />
-              </button>
-            </>
-          )}
         </div>
-      </Modal>
-    </section>
+        <div className={classes.imageWrapperTwo}>
+          <div className={classes.about__image}>
+            <Image
+              src={foto2}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(0)}
+            />
+            <Image
+              src={foto3}
+              alt="Certyfikowane Technologie"
+              onClick={() => openModal(1)}
+            />
+          </div>
+        </div>
+
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          className={classes.modal}
+          overlayClassName={classes.overlay}
+        >
+          <div className={classes.modalContent}>
+            <div className={classes.imageContainer}>
+              <Image
+                src={allImages[currentIndex].src}
+                alt={allImages[currentIndex].alt}
+                width={allImages[currentIndex].width}
+                height={allImages[currentIndex].height}
+                layout="responsive"
+                objectFit="contain"
+              />
+            </div>
+            {isMobile && (
+              <>
+                <button
+                  className={classes.prevButton}
+                  onClick={goToPreviousImage}
+                >
+                  <FaArrowCircleLeft />
+                </button>
+                <button className={classes.nextButton} onClick={goToNextImage}>
+                  <FaArrowCircleRight />
+                </button>
+              </>
+            )}
+          </div>
+        </Modal>
+      </section>
+    </>
   );
 };
 

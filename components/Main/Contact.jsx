@@ -15,7 +15,7 @@ const Contact = () => {
         <p>
           <Image
             src={phone.icon}
-            alt="Phone icon"
+            alt="ikona telefonu"
             className={classes.contact__icon}
           />{" "}
           <span className={`${classes.highlightedText} ${classes.noLinkStyle}`}>
@@ -25,7 +25,7 @@ const Contact = () => {
         <p>
           <Image
             src={email.icon}
-            alt="Email icon"
+            alt="ikona Emaila"
             className={classes.contact__icon}
           />{" "}
           {email.address}

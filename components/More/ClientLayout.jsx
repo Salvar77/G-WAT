@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Nav from "@/components/Nav/Nav";
 import BurgerMenu from "@/components/Nav/BurgerMenu";
 import Logo from "../Nav/Logo";
+import { NextSeo } from "next-seo";
+import SEO from "../../components/More/SEO";
 
 export default function ClientLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +29,12 @@ export default function ClientLayout({ children }) {
 
   return (
     <>
+      <SEO
+        title="G-WAT Pomiary elektryczne"
+        description="G-WAT Pomiary elektryczne"
+        image="https://www.g-wat.pl/g-wat10.png"
+      />
+
       <Logo showLogo={logo}></Logo>
       <Nav isOpen={isOpen} toggleNav={toggleNav} />
       <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />

@@ -10,7 +10,7 @@ const AboutMe = () => {
       <h2 className={classes.aboutMe__header}>Nasze usługi</h2>
       <div className={classes.aboutMe__container}>
         <div className={classes.aboutMe__image}>
-          <Image src={foto} alt="Założyciel firmy" />
+          <Image src={foto} alt="Urządzenie do pomiaru Sonel MPI-540PV" />
         </div>
         <div className={classes.aboutMe__content}>
           <p className={classes.greeting}>
