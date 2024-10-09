@@ -40,11 +40,22 @@ const allImages = [
   { src: foto13, alt: "Certyfikowane Technologie" },
 ];
 
-const isBrowser = typeof window !== "undefined";
-
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+
+    function handleResize() {
+      setIsMobile(window.innerWidth < 992);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -256,6 +267,19 @@ const About = () => {
               objectFit="contain"
             />
           </div>
+          {isMobile && (
+            <>
+              <button
+                className={classes.prevButton}
+                onClick={goToPreviousImage}
+              >
+                <FaArrowCircleLeft />
+              </button>
+              <button className={classes.nextButton} onClick={goToNextImage}>
+                <FaArrowCircleRight />
+              </button>
+            </>
+          )}
         </div>
       </Modal>
     </section>
