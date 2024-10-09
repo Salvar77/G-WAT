@@ -1,4 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
+import Modal from "react-modal";
 import Image from "next/image";
 import icon from "../../assets/image/huawei.svg";
 import icon1 from "../../assets/image/solaredge-logo.svg";
@@ -27,8 +29,54 @@ import foto15 from "../../assets/image/sonel10.jpg";
 import galleryHeroImageMobile from "../../assets/image/photovoltaic-system_640.jpg";
 import galleryHeroImageDesktop from "../../assets/image/photovoltaic-system_1920.jpg";
 import Hero from "@/components/Main/Hero";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+
+const allImages = [
+  { src: foto2, alt: "Certyfikowane Technologie" },
+  { src: foto3, alt: "Certyfikowane Technologie" },
+  { src: foto10, alt: "Certyfikowane Technologie" },
+  { src: foto11, alt: "Certyfikowane Technologie" },
+  { src: foto12, alt: "Certyfikowane Technologie" },
+  { src: foto13, alt: "Certyfikowane Technologie" },
+];
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 992);
+
+    function handleResize() {
+      setIsMobile(window.innerWidth < 992);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const goToNextImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === allImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPreviousImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
+    );
+  };
   return (
     <section id="about" className={classes.about}>
       <Hero
@@ -165,18 +213,75 @@ const About = () => {
 
       <div className={classes.imageWrapper}>
         <div className={classes.about__image}>
-          <Image src={foto12} alt="Certyfikowane Technologie" />
-          <Image src={foto11} alt="Certyfikowane Technologie" />
-          <Image src={foto13} alt="Certyfikowane Technologie" />
-          <Image src={foto10} alt="Certyfikowane Technologie" />
+          <Image
+            src={foto12}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(4)}
+          />
+          <Image
+            src={foto11}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(3)}
+          />
+          <Image
+            src={foto13}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(5)}
+          />
+          <Image
+            src={foto10}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(2)}
+          />
         </div>
       </div>
       <div className={classes.imageWrapperTwo}>
         <div className={classes.about__image}>
-          <Image src={foto2} alt="Certyfikowane Technologie" />
-          <Image src={foto3} alt="Certyfikowane Technologie" />
+          <Image
+            src={foto2}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(0)}
+          />
+          <Image
+            src={foto3}
+            alt="Certyfikowane Technologie"
+            onClick={() => openModal(1)}
+          />
         </div>
       </div>
+
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        className={classes.modal}
+        overlayClassName={classes.overlay}
+      >
+        <div className={classes.modalContent}>
+          <div className={classes.imageContainer}>
+            <Image
+              src={allImages[currentIndex].src}
+              alt={allImages[currentIndex].alt}
+              width={allImages[currentIndex].width}
+              height={allImages[currentIndex].height}
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
+          {isMobile && (
+            <>
+              <button
+                className={classes.prevButton}
+                onClick={goToPreviousImage}
+              >
+                <FaArrowCircleLeft />
+              </button>
+              <button className={classes.nextButton} onClick={goToNextImage}>
+                <FaArrowCircleRight />
+              </button>
+            </>
+          )}
+        </div>
+      </Modal>
     </section>
   );
 };

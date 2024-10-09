@@ -103,7 +103,7 @@
 .serviceHeader {
   cursor: pointer;
   padding: 10px;
-  background-color: $green2;
+  background-color: $dark-gray;
   color: $white-smooth;
   box-shadow: 0.3rem 0.4rem 0.8rem rgba(232, 232, 235, 0.9);
   border: 2px solid rgba(61, 54, 54, 0.1);
@@ -163,6 +163,13 @@
 }
 
 @media (min-width: 992px) {
+  .servicesContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
   .pricingHeader {
     font-size: 3rem;
   }

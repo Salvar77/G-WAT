@@ -1,0 +1,140 @@
+@import "../../styles/colors"; // import necessary colors
+
+.card {
+  position: relative;
+  margin: 1em;
+  height: 500px;
+  color: white;
+  text-align: center;
+  perspective: 1000px;
+  //   border: 2px solid black;
+  //   width: 100%;
+
+  &:hover {
+    .cardImg {
+      transform: rotateY(-180deg);
+      opacity: 0;
+    }
+    .cardInfo {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.cardImg {
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background: linear-gradient(320deg, $dark-gray, $light-gray, $light-gray);
+  border-radius: 0.4rem;
+  transition: transform 1s, opacity 1s;
+  img {
+    border-radius: 0.4rem;
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+  }
+}
+
+.cardImgTitle {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 4px rgba($grey-smooth-3, 0.7);
+  padding-top: 0.5rem;
+}
+
+.cardImgInfo {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+
+.cardInfo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(150deg, $green2, $green2, $dark-gray);
+  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s, opacity 1s;
+}
+
+.cardInfoTitle {
+  font-size: 2.4rem;
+  margin-left: 1rem;
+}
+
+.cardInfoList {
+  list-style: none; // Usunięcie domyślnych znaczników listy
+  padding: 0; // Zresetowanie paddingu
+  margin: 0; // Zresetowanie marginesu
+}
+
+.cardInfoListItem {
+  padding: 0.5em 0; // Ustawienie paddingu, aby zachować odstępy między elementami
+  font-size: 1.4rem; // Ustawienie rozmiaru fontu
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); // Stylizacja dolnej krawędzi
+  position: relative; // Ustawienie pozycji względnej dla elementów listy
+  padding-left: 1.5em; // Dodanie paddingu z lewej strony, aby zrobić miejsce na znaczniki
+  // Wyrównanie tekstu do lewej strony
+}
+
+.cardInfoListItem::before {
+  // content: "•"; // Dodanie własnego znacznika listy
+  // color: #fff; // Ustawienie koloru znacznika
+  position: absolute; // Pozycjonowanie absolutne znacznika
+  left: 0; // Umieszczenie znacznika na początku elementu
+  top: 50%; // Centrowanie znacznika względem wysokości elementu
+  transform: translateY(-50%); // Dokładne wycentrowanie znacznika
+  font-size: 1.4rem; // Rozmiar fontu znacznika
+}
+
+.cardInfoListItem:last-child {
+  border-bottom: none;
+}
+
+.description {
+  padding: 1rem;
+}
+
+.regionInfo {
+  margin-left: 1rem;
+}
+
+// .cardInfoBtn {
+//   padding: 1em;
+//   border-radius: 8px;
+//   width: 80%;
+//   background-color: #4caf50; // Example color
+//   cursor: pointer;
+//   border: none;
+// }
+
+// .description {
+//   margin-bottom: 0.5rem;
+// }
+
+// .pricingText {
+//   font-weight: bold;
+// }
+
+.regionInfo {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 45%; // Szerokość dla tabletów
+  }
+}

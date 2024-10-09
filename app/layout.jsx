@@ -5,17 +5,8 @@ import BurgerMenu from "@/components/Nav/BurgerMenu";
 import ClientLayout from "@/components/More/ClientLayout";
 import Footer from "@/components/Footer/Footer";
 import GoogleMap from "@/components/More/GoogleMap";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { NextSeo } from "next-seo";
+import SEO from "../components/More/SEO";
 
 export const metadata = {
   title: "Create Next App",
@@ -29,7 +20,7 @@ if (typeof window !== "undefined") {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <ClientLayout>{children}</ClientLayout>
         <GoogleMap />
         <Footer />

@@ -35,7 +35,6 @@ const priceList = [
       {
         region: "opolskie",
         priceBrutto: "do negocjacji",
-        // priceNetto: "732 zł",
       },
       {
         region: "śląskie / dolnośląskie",
@@ -44,6 +43,7 @@ const priceList = [
       },
     ],
     imagePath: foto1,
+    thumbnailPath: foto3,
   },
   {
     id: 2,
@@ -68,6 +68,7 @@ const priceList = [
       },
     ],
     imagePath: foto2,
+    thumbnailPath: foto4,
   },
   {
     id: 3,
@@ -91,6 +92,7 @@ const priceList = [
       },
     ],
     imagePath: foto3,
+    thumbnailPath: foto6,
   },
 ];
 

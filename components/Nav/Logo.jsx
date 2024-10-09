@@ -11,7 +11,7 @@ const Logo = ({ showLogo }) => {
 
   return (
     <div className={classes.logo}>
-      <Image src={logo} alt="Logo firmy Search IT" priority />
+      <Image src={logo} alt="Logo firmy G-WAT" priority />
     </div>
   );
 };
