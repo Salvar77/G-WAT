@@ -23,10 +23,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    // Konfiguracja modala dla aplikacji, tylko po stronie klienta
-    Modal.setAppElement("#__next");
-  }, []);
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
