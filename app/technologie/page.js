@@ -45,18 +45,17 @@ const isBrowser = typeof window !== "undefined";
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(
-    isBrowser ? window.innerWidth < 992 : false
-  );
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (!isBrowser) return;
+    setIsMobile(window.innerWidth < 992);
 
     function handleResize() {
       setIsMobile(window.innerWidth < 992);
     }
 
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
