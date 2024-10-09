@@ -14,12 +14,6 @@ import SEO from "../components/More/SEO";
 export default function Home() {
   return (
     <div>
-      <SEO
-        title="G-WAT Pomiary elektryczne"
-        description="G-WAT Pomiary elektryczne"
-        image="https://www.g-wat.pl/g-wat10.png"
-      />
-
       <Hero
         heroImageMobile={heroImageMobile}
         heroImageDesktop={heroImageDesktop}
