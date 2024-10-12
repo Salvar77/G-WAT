@@ -1,6 +1,7 @@
 import classes from "./Logo.module.scss";
 import Image from "next/image";
 import logo from "../../assets/image/g-wat10.png";
+import Link from "next/link";
 
 const Logo = ({ showLogo }) => {
   // const logoStyle = {
@@ -11,7 +12,9 @@ const Logo = ({ showLogo }) => {
 
   return (
     <div className={classes.logo}>
-      <Image src={logo} alt="Logo firmowe G-WAT" priority />
+      <Link href="/">
+        <Image src={logo} alt="Logo firmowe G-WAT" priority />
+      </Link>
     </div>
   );
 };

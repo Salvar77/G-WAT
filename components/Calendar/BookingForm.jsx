@@ -3,11 +3,21 @@ import { TextField, Button } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import classes from "./BookingForm.module.scss";
 import dayjs from "dayjs";
 import "dayjs/locale/pl";
+import classes from "./BookingForm.module.scss";
 import { useRouter } from "next/navigation";
+
 dayjs.locale("pl");
+
+const localeText = {
+  cancelButtonLabel: "Anuluj",
+  okButtonLabel: "Zatwierdź",
+  toolbarTitle: "Wybierz godzinę",
+  ampmLabel: "",
+  openPickerDialog: "Otwórz wybór czasu",
+  timePickerToolbarTitle: "Wybierz godzinę",
+};
 
 const BookingForm = ({ selectedDate }) => {
   const router = useRouter();
@@ -15,10 +25,6 @@ const BookingForm = ({ selectedDate }) => {
   const [selectedTime, setSelectedTime] = useState(dayjs());
   const [disabledTimes, setDisabledTimes] = useState([]);
 
-  // const minTime = dayjs().hour(9).minute(0);
-  // const maxTime = dayjs().hour(17).minute(0);
-
-  // Pobierz zajęte godziny z Google Calendar po wybraniu daty
   useEffect(() => {
     if (selectedDate) {
       fetch(
@@ -39,7 +45,6 @@ const BookingForm = ({ selectedDate }) => {
   }, [selectedDate]);
 
   const shouldDisableTime = (time, view) => {
-    // Sprawdzamy czy godzina lub minuta jest zablokowana
     return disabledTimes.some(({ start, end }) => {
       if (view === "hours") {
         return time.isBetween(start, end, "hour", "[)");
@@ -52,7 +57,7 @@ const BookingForm = ({ selectedDate }) => {
   };
 
   const handleTimeChange = (newTime) => {
-    setSelectedTime(newTime); // Nie blokujemy tutaj wybranej godziny, tylko w pickerze
+    setSelectedTime(newTime);
   };
 
   const handleChange = (e) => {
@@ -112,7 +117,7 @@ const BookingForm = ({ selectedDate }) => {
         <label>Imię:</label>
         <TextField
           type="text"
-          name="name"
+          name="Imię"
           value={formData.name}
           onChange={handleChange}
           required
@@ -136,7 +141,7 @@ const BookingForm = ({ selectedDate }) => {
         <label>Numer Kontaktowy:</label>
         <TextField
           type="tel"
-          name="phone"
+          name="telefon"
           value={formData.phone}
           onChange={handleChange}
           required
@@ -145,14 +150,16 @@ const BookingForm = ({ selectedDate }) => {
       </div>
 
       <div className={classes.timePickerContainer}>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <LocalizationProvider
+          dateAdapter={AdapterDayjs}
+          adapterLocale="pl"
+          localeText={localeText}
+        >
           <TimePicker
             label="Wybierz godzinę"
             value={selectedTime}
             onChange={handleTimeChange}
             ampm={false}
-            // minTime={minTime}
-            // maxTime={maxTime}
             minutesStep={30}
             shouldDisableTime={shouldDisableTime}
           />

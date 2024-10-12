@@ -12,23 +12,29 @@ const Contact = () => {
         <h2 className={classes.contact__boxHeader}>{title}</h2>
         <p>{address.street}</p>
         <p>{address.city}</p>
-        <p>
-          <Image
-            src={phone.icon}
-            alt="ikona telefonu"
-            className={classes.contact__icon}
-          />{" "}
-          <span className={`${classes.highlightedText} ${classes.noLinkStyle}`}>
-            {phone.number}
+        <p className={classes.contact__info}>
+          <span className={classes.contact__infoContent}>
+            <Image
+              src={phone.icon}
+              alt="ikona Telefonu"
+              className={classes.contact__icon}
+              width={24}
+              height={24}
+            />
+            <span className={classes.contact__text}>{phone.number}</span>
           </span>
         </p>
-        <p>
-          <Image
-            src={email.icon}
-            alt="ikona Emaila"
-            className={classes.contact__icon}
-          />{" "}
-          {email.address}
+        <p className={classes.contact__info}>
+          <span className={classes.contact__infoContent}>
+            <Image
+              src={email.icon}
+              alt="ikona Emaila"
+              className={classes.contact__icon}
+              width={24}
+              height={24}
+            />
+            <span className={classes.contact__text}>{email.address}</span>
+          </span>
         </p>
       </div>
     </section>

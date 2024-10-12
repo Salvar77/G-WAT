@@ -14,10 +14,15 @@ import Image from "next/image";
 import SEO from "../../components/More/SEO";
 
 const allImages = [
-  { src: photo1, alt: "Photo 1", width: 640, height: 427 },
-  { src: photo2, alt: "Photo 2", width: 640, height: 427 },
-  { src: photo3, alt: "Photo 3", width: 640, height: 427 },
-  { src: photo4, alt: "Photo 4", width: 640, height: 427 },
+  {
+    src: photo1,
+    alt: "Instalacja paneli fotowoltaicznych",
+    width: 640,
+    height: 427,
+  },
+  { src: photo2, alt: "Zdjęcie realizacji", width: 640, height: 427 },
+  { src: photo3, alt: "Zdjęcie realizacji", width: 640, height: 427 },
+  { src: photo4, alt: "Zdjęcie realizacji", width: 640, height: 427 },
 ];
 
 const Realizations = () => {
@@ -62,8 +67,9 @@ const Realizations = () => {
           height="66vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
+          customHeroTitle={classes.customHeroTitleRealizations}
         />
-        <h1 className={classes.title}>Realizacje</h1>
+        <h2 className={classes.title}>Realizacje</h2>
         <div className={classes.grid}>
           {allImages.map((image, index) => (
             <div

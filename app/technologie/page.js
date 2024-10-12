@@ -85,7 +85,7 @@ const About = () => {
         description="Dowiedz się więcej o technologiach i certyfikatach, które stosujemy w naszych projektach. Poznaj nasze metody pracy i sprzęt, który wykorzystujemy."
         image="https://www.g-wat.pl/g-wat10.png"
       />
-      <section id="about" className={classes.about}>
+      <section className={classes.about}>
         <Hero
           heroImageMobile={galleryHeroImageMobile}
           heroImageDesktop={galleryHeroImageDesktop}

@@ -14,19 +14,19 @@ const Gallery = () => {
   const images = [
     {
       src: photo1,
-      alt: "Photo 1",
+      alt: "Zdjęcie z pomiaru elektrycznego",
     },
     {
       src: photo2,
-      alt: "Photo 2",
+      alt: "Zdjęcie z pomiaru elektrycznego",
     },
     {
       src: photo3,
-      alt: "Photo 3",
+      alt: "Zdjęcie z pomiaru elektrycznego",
     },
     {
       src: photo4,
-      alt: "Photo 4",
+      alt: "Zdjęcie z pomiaru elektrycznego",
     },
   ];
 
@@ -81,7 +81,7 @@ const Gallery = () => {
           ))}
         </Slider>
         <div className={styles.buttonContainer}>
-          <Link href="/realizacje" className={styles.customButton}>
+          <Link href="/galeria" className={styles.customButton}>
             Zobacz Więcej
           </Link>
         </div>

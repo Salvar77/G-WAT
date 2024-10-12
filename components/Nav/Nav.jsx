@@ -39,7 +39,7 @@ const Nav = ({ isOpen, toggleNav }) => {
             </li>
 
             <li onClick={handleToggleNav}>
-              <Link href="/realizacje">Realizacje</Link>
+              <Link href="/galeria">Realizacje</Link>
             </li>
             <li onClick={handleToggleNav}>
               <Link href="/#cennik">Cennik</Link>

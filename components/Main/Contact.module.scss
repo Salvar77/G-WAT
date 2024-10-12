@@ -40,10 +40,26 @@
     }
   }
 
+  &__info {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid $green2;
+  }
+
+  &__infoContent {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+
   &__icon {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-right: 0.3rem;
+    margin-right: 0.7rem;
   }
 }
 

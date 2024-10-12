@@ -23,7 +23,7 @@ export default function Home() {
       <Hero
         heroImageMobile={heroImageMobile}
         heroImageDesktop={heroImageDesktop}
-        title="G-"
+        title="G -"
         description="Pomiary elektryczne"
         showTechnology={true}
         showButton={true}

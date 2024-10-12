@@ -11,48 +11,28 @@ import {
   FaHome,
 } from "react-icons/fa";
 
-const Technologies = () => {
-  return (
-    <section id="technologies" className={classes.technologies}>
-      <div className={classes.technologies__grid}>
-        <div className={classes.technology}>
-          <FaClipboardCheck className={classes.icon} />
-          <p>Pomiary elektryczne</p>
-        </div>
+const technologyData = [
+  { Icon: FaClipboardCheck, text: "Pomiary elektryczne" },
+  { Icon: FaCogs, text: "Instalacje techniczne i alarmowe" },
+  { Icon: FaLightbulb, text: "Montaż oświetlenia" },
+  { Icon: FaCamera, text: "Instalacje monitoringów" },
+  { Icon: FaBolt, text: "Instalacje elektryczne" },
+  { Icon: FaBatteryFull, text: "Montaż rozdzielnic" },
+  { Icon: FaHome, text: "Instalacje mieszkaniowe" },
+  { Icon: FaChargingStation, text: "Przyłącza elektryczne" },
+];
 
-        <div className={classes.technology}>
-          <FaCogs className={classes.icon} />
-          <p>Instalacje techniczne i alarmowe</p>
+const Technologies = () => (
+  <section id="technologies" className={classes.technologies}>
+    <div className={classes.technologies__grid}>
+      {technologyData.map(({ Icon, text }, index) => (
+        <div key={index} className={classes.technology}>
+          <Icon className={classes.icon} />
+          <p>{text}</p>
         </div>
-        <div className={classes.technology}>
-          <FaLightbulb className={classes.icon} />
-          <p>Montaż oświetlenia</p>
-        </div>
-        <div className={classes.technology}>
-          <FaCamera className={classes.icon} />
-          <p>Instalacje monitoringów</p>
-        </div>
-        <div className={classes.technology}>
-          <FaBolt className={classes.icon} />
-          <p>Instalacje elektryczne</p>
-        </div>
-
-        <div className={classes.technology}>
-          <FaBatteryFull className={classes.icon} />
-          <p>Montaż rozdzielnic</p>
-        </div>
-
-        <div className={classes.technology}>
-          <FaHome className={classes.icon} />
-          <p>Instalacje mieszkaniowe</p>
-        </div>
-        <div className={classes.technology}>
-          <FaChargingStation className={classes.icon} />
-          <p>Przyłącza elektryczne</p>
-        </div>
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </section>
+);
 
 export default Technologies;

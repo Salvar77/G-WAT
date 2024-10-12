@@ -14,6 +14,7 @@ const Hero = ({
   height = "100vh",
   mobileWhiteBlockColor = "#1D120C",
   desktopWhiteBlockColor = "#C8C8C8",
+  customHeroTitle = "", // Zmienna dla dynamicznej klasy
 }) => {
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
   const [viewportHeight, setViewportHeight] = useState(null);
@@ -36,7 +37,7 @@ const Hero = ({
       setCurrentImage(e.matches ? heroImageDesktop : heroImageMobile);
       setWhiteBlockColor(
         e.matches ? desktopWhiteBlockColor : mobileWhiteBlockColor
-      ); // Ustawianie koloru na podstawie zapytania media
+      );
     };
 
     mediaQuery.addEventListener("change", handleMediaQueryChange);
@@ -52,6 +53,11 @@ const Hero = ({
     desktopWhiteBlockColor,
   ]);
 
+  // Dynamiczne przypisywanie klas
+  const heroTitleClass = customHeroTitle
+    ? `${classes.hero__title} ${customHeroTitle}`
+    : classes.hero__title;
+
   return (
     <div>
       <section id="hero" className={classes.hero} style={{ height }}>
@@ -65,7 +71,7 @@ const Hero = ({
           />
         </div>
         <div className={classes.textOverlay}>
-          <h1 className={classes.hero__title}>
+          <h1 className={heroTitleClass}>
             {title}{" "}
             {showTechnology && (
               <span className={classes.hero__titleSpan}>WAT</span>
