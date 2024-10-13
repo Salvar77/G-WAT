@@ -33,12 +33,36 @@ import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import SEO from "../../components/More/SEO";
 
 const allImages = [
-  { src: foto2, alt: "Certyfikowane Technologie" },
-  { src: foto3, alt: "Certyfikowane Technologie" },
-  { src: foto10, alt: "Certyfikowane Technologie" },
-  { src: foto11, alt: "Certyfikowane Technologie" },
-  { src: foto12, alt: "Certyfikowane Technologie" },
-  { src: foto13, alt: "Certyfikowane Technologie" },
+  { src: foto5, alt: "Zestaw kabli do pomiarów fotowoltaicznych" },
+  { src: foto6, alt: "Przewody pomiarowe - akcesoria do urządzeń pomiarowych" },
+  { src: foto4, alt: "Akcesoria do mierników Sonel MPI-540PV" },
+  {
+    src: foto7,
+    alt: "Zestaw akcesoriów pomiarowych do instalacji fotowoltaicznych",
+  },
+  {
+    src: foto9,
+    alt: "Sonel MPI-540PV - miernik do precyzyjnych pomiarów instalacji fotowoltaicznych",
+  },
+  { src: foto, alt: "Miernik Sonel MPI-540PV z akcesoriami" },
+  {
+    src: foto2,
+    alt: "Infografika - Technologie fotowoltaiczne i urządzenia pomiarowe",
+  },
+  {
+    src: foto3,
+    alt: "Infografika - Elektromobilność i urządzenia do pomiarów stacji ładowania",
+  },
+  { src: foto10, alt: "Urządzenie do ładowania samochodów elektrycznych" },
+  {
+    src: foto11,
+    alt: "Sonel MPI-540PV - profesjonalny miernik do pomiarów instalacji fotowoltaicznych",
+  },
+  { src: foto12, alt: "Akcesoria pomiarowe do urządzeń Sonel MPI-540PV" },
+  {
+    src: foto13,
+    alt: "Kable i przewody do pomiarów instalacji fotowoltaicznych",
+  },
 ];
 
 const About = () => {
@@ -78,11 +102,12 @@ const About = () => {
       prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
     );
   };
+
   return (
     <>
       <SEO
-        title="O nas - Technologie i certyfikaty G-WAT"
-        description="Dowiedz się więcej o technologiach i certyfikatach, które stosujemy w naszych projektach. Poznaj nasze metody pracy i sprzęt, który wykorzystujemy."
+        title="Pomiary elektryczne i instalacje fotowoltaiczne w Opolu - Technologie i certyfikaty G-WAT"
+        description="Specjalizujemy się w profesjonalnych pomiarach elektrycznych oraz instalacjach fotowoltaicznych w Opolu i okolicach, wykorzystując zaawansowane technologie takie jak Sonel MPI-540PV. Dowiedz się więcej o naszych certyfikatach, metodach pracy i sprzęcie."
         image="https://www.g-wat.pl/g-wat10.png"
       />
       <section className={classes.about}>
@@ -90,39 +115,48 @@ const About = () => {
           heroImageMobile={galleryHeroImageMobile}
           heroImageDesktop={galleryHeroImageDesktop}
           title="Technologie"
-          // description="Wykonane zlecenia"
           showTechnology={false}
           showButton={false}
           height="66vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
+          customHeroTitle={classes.customHeroTitleRealizations}
         />
         <div className={classes.about__container}>
           <div className={classes.about__box}>
             <div className={classes.about__images}>
-              <Image src={foto8} alt="Certyfikowane Technologie" />
+              <Image
+                src={foto8}
+                alt="Certyfikowane urządzenia Sonel do pomiarów "
+              />
               <Image
                 src={foto5}
-                alt="Certyfikowane Technologie"
+                alt="Akcesoria pomiarowe do miernika Sonel MPI-540PV"
                 className={classes.hideMobile}
               />
               <Image
                 src={foto6}
-                alt="Certyfikowane Technologie"
+                alt="Szczypce pomiarowe do urządzeń Sonel"
                 className={classes.hideMobile}
               />
               <Image
                 src={foto4}
-                alt="Certyfikowane Technologie"
+                alt="Przewody pomiarowe do instalacji fotowoltaicznych"
                 className={classes.hideMobile}
               />
-              <Image src={foto7} alt="Certyfikowane Technologie" />
+              <Image
+                src={foto7}
+                alt="Urządzenia do precyzyjnych pomiarów instalacji fotowoltaicznych"
+              />
               <Image
                 src={foto9}
-                alt="Certyfikowane Technologie"
+                alt="Miernik elektryczny Sonel MPI-540PV do pomiarów fotowoltaicznych"
                 className={classes.hideMobile}
               />
-              <Image src={foto} alt="Certyfikowane Technologie" />
+              <Image
+                src={foto}
+                alt="Sonel MPI-540PV - urządzenie pomiarowe do instalacji elektrycznych"
+              />
             </div>
             <h2 className={classes.about__header}>Nasze Technologie</h2>
           </div>
@@ -139,37 +173,67 @@ const About = () => {
               <li>
                 <span className={classes.deviceText}>Huawei</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon} alt="Huawei" width={32} height={32} />
+                  <Image
+                    src={icon}
+                    alt="Logo Huawei - falowniki fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
               <li>
                 <span className={classes.deviceText}>SolarEdge</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon1} alt="SolarEdge" width={32} height={32} />
+                  <Image
+                    src={icon1}
+                    alt="Logo SolarEdge - instalacje fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
               <li>
                 <span className={classes.deviceText}>FoxEss</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon4} alt="FoxEss" width={32} height={32} />
+                  <Image
+                    src={icon4}
+                    alt="Logo FoxEss - falowniki fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
               <li>
                 <span className={classes.deviceText}>GoodWe</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon3} alt="GoodWe" width={32} height={32} />
+                  <Image
+                    src={icon3}
+                    alt="Logo GoodWe - rozwiązania fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
               <li>
                 <span className={classes.deviceText}>Growatt</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon6} alt="Growatt" width={32} height={32} />
+                  <Image
+                    src={icon6}
+                    alt="Logo Growatt - instalacje fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
               <li>
                 <span className={classes.deviceText}>SunGrow</span>
                 <span className={classes.deviceIcon}>
-                  <Image src={icon2} alt="SunGrow" width={32} height={32} />
+                  <Image
+                    src={icon2}
+                    alt="Logo SunGrow - technologie fotowoltaiczne"
+                    width={32}
+                    height={32}
+                  />
                 </span>
               </li>
             </ul>
@@ -222,22 +286,22 @@ const About = () => {
           <div className={classes.about__image}>
             <Image
               src={foto12}
-              alt="Certyfikowane Technologie"
+              alt="Akcesoria pomiarowe do urządzeń Sonel MPI-540PV"
               onClick={() => openModal(4)}
             />
             <Image
               src={foto11}
-              alt="Certyfikowane Technologie"
+              alt="Sonel MPI-540PV - profesjonalny miernik do pomiarów instalacji fotowoltaicznych"
               onClick={() => openModal(3)}
             />
             <Image
               src={foto13}
-              alt="Certyfikowane Technologie"
+              alt="Kable i przewody do pomiarów instalacji fotowoltaicznych"
               onClick={() => openModal(5)}
             />
             <Image
               src={foto10}
-              alt="Certyfikowane Technologie"
+              alt="Urządzenie do ładowania samochodów elektrycznych"
               onClick={() => openModal(2)}
             />
           </div>
@@ -246,12 +310,12 @@ const About = () => {
           <div className={classes.about__image}>
             <Image
               src={foto2}
-              alt="Certyfikowane Technologie"
+              alt="Infografika - Technologie fotowoltaiczne i urządzenia pomiarowe"
               onClick={() => openModal(0)}
             />
             <Image
               src={foto3}
-              alt="Certyfikowane Technologie"
+              alt="Infografika - Elektromobilność i urządzenia do pomiarów stacji ładowania"
               onClick={() => openModal(1)}
             />
           </div>

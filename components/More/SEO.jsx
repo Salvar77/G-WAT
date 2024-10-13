@@ -17,7 +17,9 @@ const SEO = ({ title, description, image }) => (
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+48-503-416-319",
-          "contactType": "Customer Support"
+          "contactType": "Customer Support",
+          "areaServed": "Opole, Poland",
+          "availableLanguage": ["Polish", "English"]
         },
         "logo": {
           "@type": "ImageObject",
@@ -26,7 +28,19 @@ const SEO = ({ title, description, image }) => (
         "sameAs": [
           "https://www.facebook.com/gwat",
           "https://www.linkedin.com/company/gwat"
-        ]
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Przykładowa 123",
+          "addressLocality": "Opole",
+          "postalCode": "45-123",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "50.675106",
+          "longitude": "17.921298"
+        }
       },
       {
         "@context": "https://schema.org",

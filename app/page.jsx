@@ -1,5 +1,4 @@
 import Hero from "@/components/Main/Hero";
-import classes from "./page.module.scss";
 import heroImageMobile from "../assets/image/hero5_640.png";
 import heroImageDesktop from "../assets/image/hero5_1920.png";
 import Gallery from "@/components/Main/Gallery";
@@ -8,15 +7,14 @@ import BookingPage from "@/components/Calendar/BookingPage";
 import Contact from "@/components/Main/Contact";
 import AboutMe from "@/components/Main/AboutMe";
 import Technologies from "@/components/Main/Technologies";
-import { NextSeo } from "next-seo";
 import SEO from "../components/More/SEO";
 
 export default function Home() {
   return (
     <div>
       <SEO
-        title="G-WAT Pomiary elektryczne"
-        description="G-WAT Pomiary elektryczne"
+        title="G-WAT Pomiary elektryczne i instalacje fotowoltaiczne"
+        description="G-WAT oferuje profesjonalne pomiary elektryczne oraz instalacje fotowoltaiczne, wykorzystując nowoczesne technologie i urządzenia takie jak Sonel MPI-540PV. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach."
         image="https://www.g-wat.pl/g-wat10.png"
       />
 

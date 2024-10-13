@@ -53,8 +53,8 @@ const Realizations = () => {
   return (
     <>
       <SEO
-        title="Realizacje G-WAT - Galeria naszych projektów"
-        description="Galeria naszych najnowszych realizacji w dziedzinie pomiarów elektrycznych"
+        title="Realizacje G-WAT - Galeria z pomiarów elektrycznych i instalacji fotowoltaicznych w Opolu"
+        description="Zobacz galerię naszych realizacji, które obejmują profesjonalne pomiary elektryczne oraz instalacje fotowoltaiczne w Opolu i okolicach, wykonane z wykorzystaniem nowoczesnych technologii i urządzeń, takich jak Sonel MPI-540PV."
         image="https://www.g-wat.pl/g-wat10.png"
       />
       <section className={classes.fullGallery}>

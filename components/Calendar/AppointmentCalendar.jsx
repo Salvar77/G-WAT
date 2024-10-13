@@ -15,6 +15,17 @@ const AppointmentCalendar = ({ onDateChange }) => {
     onDateChange(newDate);
   };
 
+  const tileClassName = ({ date }) => {
+    const day = date.getDay();
+    if (day === 6) {
+      // Sobota
+      return classes.saturday;
+    } else if (day === 0) {
+      return classes.sunday;
+    }
+    return null;
+  };
+
   const disableWeekDays = ({ date }) => {
     const day = date.getDay();
     return day !== 0 && day !== 6;
@@ -30,6 +41,7 @@ const AppointmentCalendar = ({ onDateChange }) => {
         value={date}
         locale="pl-PL"
         tileDisabled={disableWeekDays}
+        tileClassName={tileClassName}
       />
       <p>Wybrany termin: {dayjs(date).format("dddd, D MMMM YYYY")}</p>
     </div>

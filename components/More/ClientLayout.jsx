@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Nav from "@/components/Nav/Nav";
 import BurgerMenu from "@/components/Nav/BurgerMenu";
 import Logo from "../Nav/Logo";
-import { NextSeo } from "next-seo";
 import SEO from "../../components/More/SEO";
 
 export default function ClientLayout({ children }) {
@@ -30,11 +29,10 @@ export default function ClientLayout({ children }) {
   return (
     <>
       <SEO
-        title="G-WAT Pomiary elektryczne"
-        description="G-WAT Pomiary elektryczne"
+        title="G-WAT Pomiary elektryczne i instalacje fotowoltaiczne w Opolu"
+        description="G-WAT oferuje profesjonalne pomiary elektryczne oraz instalacje fotowoltaiczne w Opolu i okolicach, wykorzystując nowoczesne technologie i urządzenia takie jak Sonel MPI-540PV. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach."
         image="https://www.g-wat.pl/g-wat10.png"
       />
-
       <Logo showLogo={logo}></Logo>
       <Nav isOpen={isOpen} toggleNav={toggleNav} />
       <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />

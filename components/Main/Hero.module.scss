@@ -12,8 +12,9 @@
 
   &__title {
     color: $white-smooth;
-    position: relative;
+    // position: relative;
     z-index: 2;
+    text-shadow: 3px 3px 6px rgba($dark-smooth, 0.9);
   }
 
   .whiteBlock {
@@ -85,6 +86,7 @@
 
   p {
     color: $white-smooth;
+    text-shadow: 3px 3px 6px rgba($dark-smooth, 0.9);
   }
 }
 
@@ -123,6 +125,10 @@
   color: #d35400;
   text-align: left;
   padding-top: 20px;
+}
+
+.customHeroTitleRealizations {
+  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
 }
 
 @media (min-width: 768px) {

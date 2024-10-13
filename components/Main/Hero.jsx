@@ -14,7 +14,7 @@ const Hero = ({
   height = "100vh",
   mobileWhiteBlockColor = "#1D120C",
   desktopWhiteBlockColor = "#C8C8C8",
-  customHeroTitle = "", // Zmienna dla dynamicznej klasy
+  customHeroTitle = "",
 }) => {
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
   const [viewportHeight, setViewportHeight] = useState(null);
@@ -53,25 +53,20 @@ const Hero = ({
     desktopWhiteBlockColor,
   ]);
 
-  // Dynamiczne przypisywanie klas
-  const heroTitleClass = customHeroTitle
-    ? `${classes.hero__title} ${customHeroTitle}`
-    : classes.hero__title;
-
   return (
     <div>
       <section id="hero" className={classes.hero} style={{ height }}>
         <div className={classes.imageContainer}>
           <Image
             src={currentImage}
-            alt="Zdjęcie tytułowe"
+            alt="Hero grafika"
             fill={true}
             style={{ objectFit: "cover" }}
             priority
           />
         </div>
         <div className={classes.textOverlay}>
-          <h1 className={heroTitleClass}>
+          <h1 className={classes.hero__title}>
             {title}{" "}
             {showTechnology && (
               <span className={classes.hero__titleSpan}>WAT</span>

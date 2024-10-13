@@ -215,6 +215,10 @@
   }
 }
 
+.customHeroTitleRealizations {
+  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
+}
+
 @media (max-width: 768px) {
   .about__images {
     img {

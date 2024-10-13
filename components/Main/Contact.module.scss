@@ -2,7 +2,7 @@
 
 .contact {
   padding: 2rem;
-  // background: linear-gradient(150deg, #4b4b4b, #d35400 50%, #f0f0f0 100%);
+
   background-color: $white-smooth;
 
   &__box {
@@ -22,11 +22,6 @@
         rgba($green5, 0.38),
         rgba($green8, 0.9)
       );
-      // background: linear-gradient(
-      //   135deg,
-      //   rgba($green3, 0.38),
-      //   rgba($green5, 0.3)
-      // );
       border-radius: 0.6rem;
       margin-bottom: 2rem;
       text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.7);
@@ -35,7 +30,7 @@
     p {
       margin: 0.5rem;
       border-bottom: 1px solid $green2;
-      //   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
       padding: 1rem;
     }
   }

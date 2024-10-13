@@ -7,8 +7,6 @@
   color: white;
   text-align: center;
   perspective: 1000px;
-  //   border: 2px solid black;
-  //   width: 100%;
 
   &:hover {
     .cardImg {
@@ -76,28 +74,27 @@
 }
 
 .cardInfoList {
-  list-style: none; // Usunięcie domyślnych znaczników listy
-  padding: 0; // Zresetowanie paddingu
-  margin: 0; // Zresetowanie marginesu
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cardInfoListItem {
-  padding: 0.5em 0; // Ustawienie paddingu, aby zachować odstępy między elementami
-  font-size: 1.4rem; // Ustawienie rozmiaru fontu
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); // Stylizacja dolnej krawędzi
-  position: relative; // Ustawienie pozycji względnej dla elementów listy
-  padding-left: 1.5em; // Dodanie paddingu z lewej strony, aby zrobić miejsce na znaczniki
-  // Wyrównanie tekstu do lewej strony
+  padding: 0.5em 0;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  padding-left: 1.5em;
 }
 
 .cardInfoListItem::before {
-  // content: "•"; // Dodanie własnego znacznika listy
-  // color: #fff; // Ustawienie koloru znacznika
-  position: absolute; // Pozycjonowanie absolutne znacznika
-  left: 0; // Umieszczenie znacznika na początku elementu
-  top: 50%; // Centrowanie znacznika względem wysokości elementu
-  transform: translateY(-50%); // Dokładne wycentrowanie znacznika
-  font-size: 1.4rem; // Rozmiar fontu znacznika
+  // content: "•";
+  // color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
 }
 
 .cardInfoListItem:last-child {
@@ -112,29 +109,12 @@
   margin-left: 1rem;
 }
 
-// .cardInfoBtn {
-//   padding: 1em;
-//   border-radius: 8px;
-//   width: 80%;
-//   background-color: #4caf50; // Example color
-//   cursor: pointer;
-//   border: none;
-// }
-
-// .description {
-//   margin-bottom: 0.5rem;
-// }
-
-// .pricingText {
-//   font-weight: bold;
-// }
-
 .regionInfo {
   margin-top: 0.5rem;
 }
 
 @media (min-width: 992px) {
   .card {
-    width: 45%; // Szerokość dla tabletów
+    width: 45%;
   }
 }
