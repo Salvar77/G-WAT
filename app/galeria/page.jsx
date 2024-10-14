@@ -3,8 +3,8 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Hero from "@/components/Main/Hero";
 import classes from "./Realizations.module.scss";
-import galleryHeroImageMobile from "../../assets/image/photovoltaic_640.jpg";
-import galleryHeroImageDesktop from "../../assets/image/photovoltaic_1920.jpg";
+import galleryHeroImageMobile from "../../assets/image/hero8_640.png";
+import galleryHeroImageDesktop from "../../assets/image/hero8_1920.png";
 import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/hero3_640.jpg";
 import photo3 from "../../assets/image/hero1_640.jpg";
@@ -53,8 +53,8 @@ const Realizations = () => {
   return (
     <>
       <SEO
-        title="Realizacje G-WAT - Galeria z pomiarów elektrycznych i instalacji fotowoltaicznych w Opolu"
-        description="Zobacz galerię naszych realizacji, które obejmują profesjonalne pomiary elektryczne oraz instalacje fotowoltaiczne w Opolu i okolicach, wykonane z wykorzystaniem nowoczesnych technologii i urządzeń, takich jak Sonel MPI-540PV."
+        title="Realizacje G-WAT - Galeria z pomiarów elektrycznych i serwisu instalacji fotowoltaicznych w Opolu"
+        description="Zobacz galerię naszych realizacji, które obejmują profesjonalne pomiary elektryczne oraz serwis instalacji fotowoltaicznych w Opolu i okolicach, wykonane z wykorzystaniem nowoczesnych technologii i urządzeń, takich jak Sonel MPI-540PV."
         image="https://www.g-wat.pl/g-wat10.png"
       />
       <section className={classes.fullGallery}>

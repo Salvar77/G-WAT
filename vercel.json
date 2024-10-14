@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://www.g-wat.pl",
+      "permanent": true
+    },
+    {
+      "source": "http://g-wat.pl",
+      "destination": "https://www.g-wat.pl",
+      "permanent": true
+    },
+    {
+      "source": "https://g-wat.pl",
+      "destination": "https://www.g-wat.pl",
+      "permanent": true
+    }
+  ]
+}

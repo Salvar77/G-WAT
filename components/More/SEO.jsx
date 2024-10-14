@@ -25,15 +25,12 @@ const SEO = ({ title, description, image }) => (
           "@type": "ImageObject",
           "url": "https://www.g-wat.pl/g-wat10.png"
         },
-        "sameAs": [
-          "https://www.facebook.com/gwat",
-          "https://www.linkedin.com/company/gwat"
-        ],
+
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "ul. Przykładowa 123",
+          "streetAddress": "ul. Stefana Okrzei 11",
           "addressLocality": "Opole",
-          "postalCode": "45-123",
+          "postalCode": "45-713",
           "addressCountry": "PL"
         },
         "geo": {
@@ -70,3 +67,8 @@ const SEO = ({ title, description, image }) => (
 );
 
 export default SEO;
+
+// "sameAs": [
+//   "https://www.facebook.com/gwat",
+//   "https://www.linkedin.com/company/gwat"
+// ],

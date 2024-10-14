@@ -29,8 +29,8 @@ export default function ClientLayout({ children }) {
   return (
     <>
       <SEO
-        title="G-WAT Pomiary elektryczne i instalacje fotowoltaiczne w Opolu"
-        description="G-WAT oferuje profesjonalne pomiary elektryczne oraz instalacje fotowoltaiczne w Opolu i okolicach, wykorzystując nowoczesne technologie i urządzenia takie jak Sonel MPI-540PV. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach."
+        title="G-WAT Pomiary elektryczne i serwis instalacji fotowoltaicznych w Opolu"
+        description="G-WAT oferuje profesjonalne pomiary elektryczne oraz serwis instalacji fotowoltaicznych w Opolu i okolicach, wykorzystując nowoczesne technologie i urządzenia takie jak Sonel MPI-540PV. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach."
         image="https://www.g-wat.pl/g-wat10.png"
       />
       <Logo showLogo={logo}></Logo>

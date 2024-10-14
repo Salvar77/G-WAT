@@ -26,8 +26,8 @@ import foto12 from "../../assets/image/sonel5.jpg";
 import foto13 from "../../assets/image/sonel8.jpg";
 import foto14 from "../../assets/image/sonel9.jpg";
 import foto15 from "../../assets/image/sonel10.jpg";
-import galleryHeroImageMobile from "../../assets/image/photovoltaic-system_640.jpg";
-import galleryHeroImageDesktop from "../../assets/image/photovoltaic-system_1920.jpg";
+import galleryHeroImageMobile from "../../assets/image/hero7_640.jpg";
+import galleryHeroImageDesktop from "../../assets/image/hero7_1920.jpg";
 import Hero from "@/components/Main/Hero";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import SEO from "../../components/More/SEO";
@@ -106,8 +106,8 @@ const About = () => {
   return (
     <>
       <SEO
-        title="Pomiary elektryczne i instalacje fotowoltaiczne w Opolu - Technologie i certyfikaty G-WAT"
-        description="Specjalizujemy się w profesjonalnych pomiarach elektrycznych oraz instalacjach fotowoltaicznych w Opolu i okolicach, wykorzystując zaawansowane technologie takie jak Sonel MPI-540PV. Dowiedz się więcej o naszych certyfikatach, metodach pracy i sprzęcie."
+        title="Pomiary elektryczne i serwis instalacji fotowoltaicznych w Opolu - Technologie i certyfikaty G-WAT"
+        description="Specjalizujemy się w profesjonalnych pomiarach elektrycznych oraz serwisie instalacji fotowoltaicznych w Opolu i okolicach, wykorzystując zaawansowane technologie takie jak Sonel MPI-540PV. Dowiedz się więcej o naszych certyfikatach, metodach pracy i sprzęcie."
         image="https://www.g-wat.pl/g-wat10.png"
       />
       <section className={classes.about}>

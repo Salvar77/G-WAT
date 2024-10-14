@@ -12,6 +12,9 @@ import foto3 from "../assets/image/hero3_640.jpg";
 import foto4 from "../assets/image/hero_640.jpg";
 import foto5 from "../assets/image/hero1_640.jpg";
 import foto6 from "../assets/image/hero1_640.jpg";
+import foto7 from "../assets/image/hero7_640.jpg";
+import foto8 from "../assets/image/hero6_640.jpg";
+import foto9 from "../assets/image/hero9_640.jpg";
 
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
@@ -31,6 +34,9 @@ export {
   foto4,
   foto5,
   foto6,
+  foto7,
+  foto8,
+  foto9,
   FaEnvelope,
   FaPhoneAlt,
   mail,

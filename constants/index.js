@@ -11,6 +11,9 @@ import {
   foto4,
   foto5,
   foto6,
+  foto7,
+  foto8,
+  foto9,
   FaEnvelope,
   FaPhoneAlt,
   mail,
@@ -42,8 +45,8 @@ const priceList = [
         priceNetto: null,
       },
     ],
-    imagePath: foto1,
-    thumbnailPath: foto3,
+    imagePath: foto7,
+    thumbnailPath: foto7,
   },
   {
     id: 2,
@@ -67,8 +70,8 @@ const priceList = [
         priceNetto: null,
       },
     ],
-    imagePath: foto2,
-    thumbnailPath: foto4,
+    imagePath: foto9,
+    thumbnailPath: foto9,
   },
   {
     id: 3,
@@ -91,8 +94,8 @@ const priceList = [
         priceNetto: null,
       },
     ],
-    imagePath: foto3,
-    thumbnailPath: foto6,
+    imagePath: foto8,
+    thumbnailPath: foto8,
   },
 ];
 
