@@ -32,19 +32,17 @@ import Hero from "@/components/Main/Hero";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import SEO from "../../components/More/SEO";
 
-const allImages = [
-  { src: foto5, alt: "Zestaw kabli do pomiarów fotowoltaicznych" },
-  { src: foto6, alt: "Przewody pomiarowe - akcesoria do urządzeń pomiarowych" },
-  { src: foto4, alt: "Akcesoria do mierników Sonel MPI-540PV" },
+const selectedImages = [
+  { src: foto12, alt: "Akcesoria pomiarowe do urządzeń Sonel MPI-540PV" },
   {
-    src: foto7,
-    alt: "Zestaw akcesoriów pomiarowych do instalacji fotowoltaicznych",
+    src: foto11,
+    alt: "Sonel MPI-540PV - profesjonalny miernik do pomiarów instalacji fotowoltaicznych",
   },
   {
-    src: foto9,
-    alt: "Sonel MPI-540PV - miernik do precyzyjnych pomiarów instalacji fotowoltaicznych",
+    src: foto13,
+    alt: "Kable i przewody do pomiarów instalacji fotowoltaicznych",
   },
-  { src: foto, alt: "Miernik Sonel MPI-540PV z akcesoriami" },
+  { src: foto10, alt: "Urządzenie do ładowania samochodów elektrycznych" },
   {
     src: foto2,
     alt: "Infografika - Technologie fotowoltaiczne i urządzenia pomiarowe",
@@ -52,16 +50,6 @@ const allImages = [
   {
     src: foto3,
     alt: "Infografika - Elektromobilność i urządzenia do pomiarów stacji ładowania",
-  },
-  { src: foto10, alt: "Urządzenie do ładowania samochodów elektrycznych" },
-  {
-    src: foto11,
-    alt: "Sonel MPI-540PV - profesjonalny miernik do pomiarów instalacji fotowoltaicznych",
-  },
-  { src: foto12, alt: "Akcesoria pomiarowe do urządzeń Sonel MPI-540PV" },
-  {
-    src: foto13,
-    alt: "Kable i przewody do pomiarów instalacji fotowoltaicznych",
   },
 ];
 
@@ -93,13 +81,13 @@ const About = () => {
 
   const goToNextImage = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === allImages.length - 1 ? 0 : prevIndex + 1
+      prevIndex === selectedImages.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const goToPreviousImage = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
+      prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1
     );
   };
 
@@ -286,23 +274,23 @@ const About = () => {
           <div className={classes.about__image}>
             <Image
               src={foto12}
-              alt="Akcesoria pomiarowe do urządzeń Sonel MPI-540PV"
-              onClick={() => openModal(4)}
+              alt="Urządzenie pomiarowe Sonel MPI-540PV"
+              onClick={() => openModal(0)}
             />
             <Image
               src={foto11}
               alt="Sonel MPI-540PV - profesjonalny miernik do pomiarów instalacji fotowoltaicznych"
-              onClick={() => openModal(3)}
+              onClick={() => openModal(1)}
             />
             <Image
               src={foto13}
               alt="Kable i przewody do pomiarów instalacji fotowoltaicznych"
-              onClick={() => openModal(5)}
+              onClick={() => openModal(2)}
             />
             <Image
               src={foto10}
-              alt="Urządzenie do ładowania samochodów elektrycznych"
-              onClick={() => openModal(2)}
+              alt="Urządzenie pomiarowe Sonel MPI-540PV"
+              onClick={() => openModal(3)}
             />
           </div>
         </div>
@@ -311,12 +299,12 @@ const About = () => {
             <Image
               src={foto2}
               alt="Infografika - Technologie fotowoltaiczne i urządzenia pomiarowe"
-              onClick={() => openModal(0)}
+              onClick={() => openModal(4)}
             />
             <Image
               src={foto3}
               alt="Infografika - Elektromobilność i urządzenia do pomiarów stacji ładowania"
-              onClick={() => openModal(1)}
+              onClick={() => openModal(5)}
             />
           </div>
         </div>
@@ -330,10 +318,10 @@ const About = () => {
           <div className={classes.modalContent}>
             <div className={classes.imageContainer}>
               <Image
-                src={allImages[currentIndex].src}
-                alt={allImages[currentIndex].alt}
-                width={allImages[currentIndex].width}
-                height={allImages[currentIndex].height}
+                src={selectedImages[currentIndex].src}
+                alt={selectedImages[currentIndex].alt}
+                width={selectedImages[currentIndex].width}
+                height={selectedImages[currentIndex].height}
                 layout="responsive"
                 objectFit="contain"
               />
