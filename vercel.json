@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://www.g-wat.pl/$1",
-      "permanent": true
-    }
-  ]
-}
