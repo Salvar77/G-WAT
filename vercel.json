@@ -6,13 +6,8 @@
       "permanent": true
     },
     {
-      "source": "http://g-wat.pl",
-      "destination": "https://www.g-wat.pl",
-      "permanent": true
-    },
-    {
-      "source": "https://g-wat.pl",
-      "destination": "https://www.g-wat.pl",
+      "source": "/(.*)",
+      "destination": "https://www.g-wat.pl/$1",
       "permanent": true
     }
   ]
