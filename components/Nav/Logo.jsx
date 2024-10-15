@@ -1,6 +1,6 @@
 import classes from "./Logo.module.scss";
 import Image from "next/image";
-import logo from "../../assets/image/g-wat10.png";
+import logo from "../../assets/image/g-wat11.png";
 import Link from "next/link";
 
 const Logo = () => {
