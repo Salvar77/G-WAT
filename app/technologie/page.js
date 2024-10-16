@@ -26,8 +26,8 @@ import foto12 from "../../assets/image/sonel5.jpg";
 import foto13 from "../../assets/image/sonel8.jpg";
 import foto14 from "../../assets/image/sonel9.jpg";
 import foto15 from "../../assets/image/sonel10.jpg";
-import galleryHeroImageMobile from "../../assets/image/hero7_640.jpg";
-import galleryHeroImageDesktop from "../../assets/image/hero7_1920.jpg";
+import realizationHeroImageMobile from "../../assets/image/hero7_640.jpg";
+import realizationHeroImageDesktop from "../../assets/image/hero7_1920.jpg";
 import Hero from "@/components/Main/Hero";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import SEO from "../../components/More/SEO";
@@ -100,12 +100,12 @@ const About = () => {
       />
       <section className={classes.about}>
         <Hero
-          heroImageMobile={galleryHeroImageMobile}
-          heroImageDesktop={galleryHeroImageDesktop}
+          heroImageMobile={realizationHeroImageMobile}
+          heroImageDesktop={realizationHeroImageDesktop}
           title="Technologie"
           showTechnology={false}
           showButton={false}
-          height="66vh"
+          height="75vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
           customHeroTitle={classes.customHeroTitleRealizations}

@@ -112,9 +112,10 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
+    opacity: 0.7;
 
     &:hover {
-      color: $green2;
+      opacity: 1;
     }
   }
 
@@ -149,7 +150,34 @@
   text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
 }
 
+// .customHeroClassRealizations {
+//   position: relative;
+//   &::before {
+//     position: absolute;
+//     content: "";
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-image: url("../../assets/image/hero8_640.png");
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-position: center;
+//     // background-repeat: no-repeat;
+//     z-index: -1;
+//     transform: translateY(0);
+//     transition: transform 0.5s ease-out;
+//     filter: brightness(0.7);
+//   }
+// }
+
 @media screen and (min-width: 992px) {
+  .customHeroClassRealizations {
+    &::before {
+      background-image: url("../../assets/image/hero8_1920.png");
+    }
+  }
   .fullGallery {
     padding-top: 0;
   }

@@ -10,15 +10,15 @@ const GoogleCalendarIntegration = ({ date, formData }) => {
       const initClient = () => {
         gapi.client
           .init({
-            clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID, // Google Client ID
+            clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
             discoveryDocs: [
               "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",
             ],
-            scope: "https://www.googleapis.com/auth/calendar.events", // Zakres uprawnień
+            scope: "https://www.googleapis.com/auth/calendar.events",
           })
           .then(() => {
             console.log("Google API client initialized successfully");
-            setIsAuthInitialized(true); // Oznaczamy, że autoryzacja jest zainicjalizowana
+            setIsAuthInitialized(true);
           })
           .catch((error) => {
             console.error("Error initializing Google API client:", error);
@@ -44,7 +44,7 @@ const GoogleCalendarIntegration = ({ date, formData }) => {
             timeZone: "Europe/Warsaw",
           },
           end: {
-            dateTime: new Date(date.getTime() + 60 * 60 * 1000).toISOString(), // 1 godzina spotkania
+            dateTime: new Date(date.getTime() + 60 * 60 * 1000).toISOString(),
             timeZone: "Europe/Warsaw",
           },
         };
@@ -56,7 +56,7 @@ const GoogleCalendarIntegration = ({ date, formData }) => {
             resource: event,
           })
           .then((response) => {
-            console.log("Event created successfully:", response); // Logowanie odpowiedzi
+            console.log("Event created successfully:", response);
             alert(
               imieninydz`Wydarzenie zostało dodane do kalendarza: ${response.result.htmlLink}`
             );
@@ -65,7 +65,7 @@ const GoogleCalendarIntegration = ({ date, formData }) => {
             console.error(
               "Błąd podczas dodawania wydarzenia do kalendarza:",
               error
-            ); // Logowanie błędów
+            );
             alert("Wystąpił błąd podczas dodawania wydarzenia do kalendarza.");
           });
       } else {

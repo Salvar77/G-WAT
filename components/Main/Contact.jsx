@@ -33,7 +33,7 @@ const Contact = () => {
               width={24}
               height={24}
             />
-            <span className={classes.contact__text}>{email.address}</span>
+            <span>{email.address}</span>
           </span>
         </p>
       </div>

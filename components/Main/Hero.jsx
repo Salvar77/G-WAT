@@ -54,37 +54,38 @@ const Hero = ({
   ]);
 
   return (
-    <div>
-      <section id="hero" className={classes.hero} style={{ height }}>
-        <div className={classes.imageContainer}>
-          <Image
-            src={currentImage}
-            alt="Hero grafika"
-            fill={true}
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
-        <div className={classes.textOverlay}>
-          <h1 className={classes.hero__title}>
-            {title}{" "}
-            {showTechnology && (
-              <span className={classes.hero__titleSpan}>WAT</span>
-            )}
-          </h1>
-          <p>{description}</p>
-          {showButton && (
-            <a href="#galeria" className={classes.button}>
-              Realizacje
-            </a>
+    <section
+      id="hero"
+      className={classes.hero}
+      style={{
+        height,
+        backgroundImage: currentImage ? `url(${currentImage.src})` : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
+      }}
+    >
+      <div className={classes.textOverlay}>
+        <h1 className={classes.hero__title}>
+          {title}{" "}
+          {showTechnology && (
+            <span className={classes.hero__titleSpan}>WAT</span>
           )}
-        </div>
-        <div
-          className={`${classes.whiteBlock} ${classes.whiteBlockLeft}`}
-          style={{ backgroundColor: whiteBlockColor }}
-        ></div>
-      </section>
-    </div>
+        </h1>
+        <p>{description}</p>
+        {showButton && (
+          <a href="#galeria" className={classes.button}>
+            Realizacje
+          </a>
+        )}
+      </div>
+      <div
+        className={`${classes.whiteBlock} ${classes.whiteBlockLeft}`}
+        style={{ backgroundColor: whiteBlockColor }}
+      ></div>
+    </section>
   );
 };
 

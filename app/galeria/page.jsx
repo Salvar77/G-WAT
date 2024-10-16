@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import Hero from "@/components/Main/Hero";
 import classes from "./Realizations.module.scss";
+import styles from "../../components/Main/Hero";
 import galleryHeroImageMobile from "../../assets/image/hero8_640.png";
 import galleryHeroImageDesktop from "../../assets/image/hero8_1920.png";
 import photo1 from "../../assets/image/hero2_640.jpg";
@@ -64,10 +65,9 @@ const Realizations = () => {
           title="Galeria"
           showTechnology={false}
           showButton={false}
-          height="66vh"
+          height="75vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
-          customHeroTitle={classes.customHeroTitleRealizations}
         />
         <h2 className={classes.title}>Realizacje</h2>
         <div className={classes.grid}>

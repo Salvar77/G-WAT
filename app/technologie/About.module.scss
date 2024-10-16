@@ -198,9 +198,10 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
+    opacity: 0.7;
 
     &:hover {
-      color: $green2;
+      opacity: 1;
     }
   }
 

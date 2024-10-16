@@ -18,7 +18,6 @@ const AppointmentCalendar = ({ onDateChange }) => {
   const tileClassName = ({ date }) => {
     const day = date.getDay();
     if (day === 6) {
-      // Sobota
       return classes.saturday;
     } else if (day === 0) {
       return classes.sunday;
