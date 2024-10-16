@@ -2,6 +2,9 @@ import "./globals.scss";
 import ClientLayout from "@/components/More/ClientLayout";
 import Footer from "@/components/Footer/Footer";
 import GoogleMap from "@/components/More/GoogleMap";
+import Hero from "@/components/Main/Hero";
+import heroImageMobile from "../assets/image/hero5_640.png";
+import heroImageDesktop from "../assets/image/hero5_1920.png";
 
 export const metadata = {
   title: "G-WAT Pomiary elektryczne",

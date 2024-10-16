@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import Image from "next/image";
-import classes from "./Hero.module.scss";
+import classes from "./TechHero.module.scss"; // Uwzględnij ścieżkę do twojego pliku SCSS
 
-const Hero = ({
+const TechHero = ({
   heroImageMobile,
   heroImageDesktop,
   title,
@@ -55,23 +55,23 @@ const Hero = ({
 
   return (
     <div>
-      <section id="hero" className={classes.hero} style={{ height }}>
-        <div className={classes.textOverlay}>
-          <h1 className={classes.hero__title}>
+      <section id="techHero" className={classes.techHero} style={{ height }}>
+        <div className={classes.techHero__textOverlay}>
+          <h1 className={classes.techHero__title}>
             {title}{" "}
             {showTechnology && (
-              <span className={classes.hero__titleSpan}>WAT</span>
+              <span className={classes.techHero__titleSpan}>WAT</span>
             )}
           </h1>
           <p>{description}</p>
           {showButton && (
-            <a href="#galeria" className={classes.button}>
+            <a href="#galeria" className={classes.techHero__button}>
               Realizacje
             </a>
           )}
         </div>
         <div
-          className={`${classes.whiteBlock} ${classes.whiteBlockLeft}`}
+          className={`${classes.techHero__whiteBlock} ${classes.techHero__whiteBlockLeft}`}
           style={{ backgroundColor: whiteBlockColor }}
         ></div>
       </section>
@@ -79,4 +79,4 @@ const Hero = ({
   );
 };
 
-export default Hero;
+export default TechHero;

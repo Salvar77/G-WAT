@@ -13,6 +13,7 @@ import photo4 from "../../assets/image/hero_640.jpg";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import Image from "next/image";
 import SEO from "../../components/More/SEO";
+import HeroGallery from "@/components/More/HeroGallery";
 
 const allImages = [
   {
@@ -58,17 +59,19 @@ const Realizations = () => {
         description="Zobacz galerię naszych realizacji, które obejmują profesjonalne pomiary elektryczne oraz serwis instalacji fotowoltaicznych w Opolu i okolicach, wykonane z wykorzystaniem nowoczesnych technologii i urządzeń, takich jak Sonel MPI-540PV."
         image="https://www.g-wat.pl/g-wat10.png"
       />
+      <HeroGallery
+        heroImageMobile={galleryHeroImageMobile}
+        heroImageDesktop={galleryHeroImageDesktop}
+        title="Galeria"
+        showTechnology={false}
+        showButton={false}
+        height="66vh"
+        mobileWhiteBlockColor="disable"
+        desktopWhiteBlockColor="disable"
+        customHeroTitle={classes.customHeroTitleRealizations}
+        customHeroClass={classes.customHeroClassRealizations}
+      />
       <section className={classes.fullGallery}>
-        <Hero
-          heroImageMobile={galleryHeroImageMobile}
-          heroImageDesktop={galleryHeroImageDesktop}
-          title="Galeria"
-          showTechnology={false}
-          showButton={false}
-          height="75vh"
-          mobileWhiteBlockColor="disable"
-          desktopWhiteBlockColor="disable"
-        />
         <h2 className={classes.title}>Realizacje</h2>
         <div className={classes.grid}>
           {allImages.map((image, index) => (

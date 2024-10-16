@@ -31,6 +31,7 @@ import realizationHeroImageDesktop from "../../assets/image/hero7_1920.jpg";
 import Hero from "@/components/Main/Hero";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import SEO from "../../components/More/SEO";
+import TechHero from "@/components/More/TechHero";
 
 const selectedImages = [
   { src: foto12, alt: "Akcesoria pomiarowe do urządzeń Sonel MPI-540PV" },
@@ -98,18 +99,17 @@ const About = () => {
         description="Specjalizujemy się w profesjonalnych pomiarach elektrycznych oraz serwisie instalacji fotowoltaicznych w Opolu i okolicach, wykorzystując zaawansowane technologie takie jak Sonel MPI-540PV. Dowiedz się więcej o naszych certyfikatach, metodach pracy i sprzęcie."
         image="https://www.g-wat.pl/g-wat10.png"
       />
+      <TechHero
+        heroImageMobile={realizationHeroImageMobile}
+        heroImageDesktop={realizationHeroImageDesktop}
+        title="Technologie"
+        showTechnology={false}
+        showButton={false}
+        height="66vh"
+        mobileWhiteBlockColor="disable"
+        desktopWhiteBlockColor="disable"
+      />
       <section className={classes.about}>
-        <Hero
-          heroImageMobile={realizationHeroImageMobile}
-          heroImageDesktop={realizationHeroImageDesktop}
-          title="Technologie"
-          showTechnology={false}
-          showButton={false}
-          height="75vh"
-          mobileWhiteBlockColor="disable"
-          desktopWhiteBlockColor="disable"
-          customHeroTitle={classes.customHeroTitleRealizations}
-        />
         <div className={classes.about__container}>
           <div className={classes.about__box}>
             <div className={classes.about__images}>
