@@ -99,16 +99,18 @@ const About = () => {
         description="Specjalizujemy się w profesjonalnych pomiarach elektrycznych oraz serwisie instalacji fotowoltaicznych w Opolu i okolicach, wykorzystując zaawansowane technologie takie jak Sonel MPI-540PV. Dowiedz się więcej o naszych certyfikatach, metodach pracy i sprzęcie."
         image="https://www.g-wat.pl/g-wat10.png"
       />
-      <TechHero
-        heroImageMobile={realizationHeroImageMobile}
-        heroImageDesktop={realizationHeroImageDesktop}
-        title="Technologie"
-        showTechnology={false}
-        showButton={false}
-        height="66vh"
-        mobileWhiteBlockColor="disable"
-        desktopWhiteBlockColor="disable"
-      />
+      <div className="heroContainer">
+        <TechHero
+          heroImageMobile={realizationHeroImageMobile}
+          heroImageDesktop={realizationHeroImageDesktop}
+          title="Technologie"
+          showTechnology={false}
+          showButton={false}
+          height="66vh"
+          mobileWhiteBlockColor="disable"
+          desktopWhiteBlockColor="disable"
+        />
+      </div>
       <section className={classes.about}>
         <div className={classes.about__container}>
           <div className={classes.about__box}>

@@ -59,18 +59,20 @@ const Realizations = () => {
         description="Zobacz galerię naszych realizacji, które obejmują profesjonalne pomiary elektryczne oraz serwis instalacji fotowoltaicznych w Opolu i okolicach, wykonane z wykorzystaniem nowoczesnych technologii i urządzeń, takich jak Sonel MPI-540PV."
         image="https://www.g-wat.pl/g-wat10.png"
       />
-      <HeroGallery
-        heroImageMobile={galleryHeroImageMobile}
-        heroImageDesktop={galleryHeroImageDesktop}
-        title="Galeria"
-        showTechnology={false}
-        showButton={false}
-        height="66vh"
-        mobileWhiteBlockColor="disable"
-        desktopWhiteBlockColor="disable"
-        customHeroTitle={classes.customHeroTitleRealizations}
-        customHeroClass={classes.customHeroClassRealizations}
-      />
+      <div className="heroContainer">
+        <HeroGallery
+          heroImageMobile={galleryHeroImageMobile}
+          heroImageDesktop={galleryHeroImageDesktop}
+          title="Galeria"
+          showTechnology={false}
+          showButton={false}
+          height="66vh"
+          mobileWhiteBlockColor="disable"
+          desktopWhiteBlockColor="disable"
+          customHeroTitle={classes.customHeroTitleRealizations}
+          customHeroClass={classes.customHeroClassRealizations}
+        />
+      </div>
       <section className={classes.fullGallery}>
         <h2 className={classes.title}>Realizacje</h2>
         <div className={classes.grid}>

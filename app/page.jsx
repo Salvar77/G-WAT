@@ -8,6 +8,7 @@ import Contact from "@/components/Main/Contact";
 import AboutMe from "@/components/Main/AboutMe";
 import Technologies from "@/components/Main/Technologies";
 import SEO from "../components/More/SEO";
+import classes from "./page.module.scss";
 
 export default function Home() {
   return (
@@ -18,17 +19,19 @@ export default function Home() {
         image="https://www.g-wat.pl/g-wat10.png"
       />
 
-      <Hero
-        heroImageMobile={heroImageMobile}
-        heroImageDesktop={heroImageDesktop}
-        title="G -"
-        description="Pomiary elektryczne"
-        showTechnology={true}
-        showButton={true}
-        height="100vh"
-        mobileWhiteBlockColor="#C8C8C8"
-        desktopWhiteBlockColor="#e0e0e0"
-      />
+      <div className="heroContainer">
+        <Hero
+          heroImageMobile={heroImageMobile}
+          heroImageDesktop={heroImageDesktop}
+          title="G -"
+          description="Pomiary elektryczne"
+          showTechnology={true}
+          showButton={true}
+          height="100vh"
+          mobileWhiteBlockColor="#C8C8C8"
+          desktopWhiteBlockColor="#e0e0e0"
+        />
+      </div>
       <AboutMe />
       <Technologies />
       <Gallery />
