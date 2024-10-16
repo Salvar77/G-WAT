@@ -106,7 +106,7 @@ const About = () => {
           title="Technologie"
           showTechnology={false}
           showButton={false}
-          height="66vh"
+          height="70vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
         />

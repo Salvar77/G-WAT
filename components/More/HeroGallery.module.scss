@@ -12,20 +12,19 @@
 
   &::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../../assets/image/hero8_640.png");
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
     transform: translateY(0);
     transition: transform 0.5s ease-out;
-    filter: brightness(0.6);
+    filter: brightness(0.7);
+    background-image: url("../../assets/image/hero8_640.png");
   }
 
   &__title {
@@ -55,39 +54,6 @@
   }
 }
 
-.hero__title {
-  &Span {
-    color: $green2;
-    font-weight: bold;
-  }
-}
-
-.imageContainer {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
-    z-index: 1;
-  }
-}
-
 .textOverlay {
   position: absolute;
   top: 50%;
@@ -104,47 +70,6 @@
     color: $white-smooth;
     text-shadow: 3px 3px 6px rgba($dark-smooth, 0.9);
   }
-}
-
-.hero h1 {
-  font-size: 2.6rem;
-}
-
-.hero p {
-  font-size: 1.6rem;
-}
-
-.button {
-  display: inline-block;
-  width: auto;
-  margin: 0 auto;
-  padding: 0.8rem 1.4rem;
-  font-size: 1.6rem;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  border-radius: 0.4rem;
-  color: $dark-smooth;
-  background-color: $white-smooth;
-  box-shadow: 0.2rem 0.4rem 0.6rem rgba(56, 201, 34, 0.2);
-  text-decoration: none;
-  transition: 0.3s;
-
-  &:hover {
-    color: $green2;
-    box-shadow: 0.5rem 0.8rem 1rem rgba(160, 92, 14, 0.4),
-      0 0 1rem rgba(220, 94, 15, 0.5);
-    transform: scale(1.05);
-  }
-}
-
-.customHeroTitle {
-  font-size: 10rem;
-  color: #d35400;
-  text-align: left;
-  padding-top: 20px;
-}
-
-.customHeroTitleRealizations {
-  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
 }
 
 @media (min-width: 768px) {
@@ -164,6 +89,7 @@
 @media (min-width: 992px) {
   .hero {
     &::before {
+      position: fixed;
       background-image: url("../../assets/image/hero8_1920.png");
     }
   }

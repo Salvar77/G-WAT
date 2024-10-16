@@ -25,6 +25,15 @@ const allImages = [
   { src: photo2, alt: "Zdjęcie realizacji", width: 640, height: 427 },
   { src: photo3, alt: "Zdjęcie realizacji", width: 640, height: 427 },
   { src: photo4, alt: "Zdjęcie realizacji", width: 640, height: 427 },
+  {
+    src: photo1,
+    alt: "Instalacja paneli fotowoltaicznych",
+    width: 640,
+    height: 427,
+  },
+  { src: photo2, alt: "Zdjęcie realizacji", width: 640, height: 427 },
+  { src: photo3, alt: "Zdjęcie realizacji", width: 640, height: 427 },
+  { src: photo4, alt: "Zdjęcie realizacji", width: 640, height: 427 },
 ];
 
 const Realizations = () => {
@@ -66,7 +75,7 @@ const Realizations = () => {
           title="Galeria"
           showTechnology={false}
           showButton={false}
-          height="66vh"
+          height="70vh"
           mobileWhiteBlockColor="disable"
           desktopWhiteBlockColor="disable"
           customHeroTitle={classes.customHeroTitleRealizations}

@@ -16,42 +16,40 @@ const Hero = ({
   desktopWhiteBlockColor = "#C8C8C8",
   customHeroTitle = "",
 }) => {
-  const [currentImage, setCurrentImage] = useState(heroImageMobile);
-  const [viewportHeight, setViewportHeight] = useState(null);
   const [whiteBlockColor, setWhiteBlockColor] = useState(mobileWhiteBlockColor);
 
-  useEffect(() => {
-    const updateHeroHeight = () => {
-      setViewportHeight(window.innerHeight);
-    };
+  // useEffect(() => {
+  //   const updateHeroHeight = () => {
+  //     setViewportHeight(window.innerHeight);
+  //   };
 
-    window.addEventListener("resize", updateHeroHeight);
-    updateHeroHeight();
+  //   window.addEventListener("resize", updateHeroHeight);
+  //   updateHeroHeight();
 
-    return () => window.removeEventListener("resize", updateHeroHeight);
-  }, []);
+  //   return () => window.removeEventListener("resize", updateHeroHeight);
+  // }, []);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 992px)");
-    const handleMediaQueryChange = (e) => {
-      setCurrentImage(e.matches ? heroImageDesktop : heroImageMobile);
-      setWhiteBlockColor(
-        e.matches ? desktopWhiteBlockColor : mobileWhiteBlockColor
-      );
-    };
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(min-width: 992px)");
+  //   const handleMediaQueryChange = (e) => {
+  //     setCurrentImage(e.matches ? heroImageDesktop : heroImageMobile);
+  //     setWhiteBlockColor(
+  //       e.matches ? desktopWhiteBlockColor : mobileWhiteBlockColor
+  //     );
+  //   };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
+  //   mediaQuery.addEventListener("change", handleMediaQueryChange);
+  //   handleMediaQueryChange(mediaQuery);
 
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, [
-    heroImageDesktop,
-    heroImageMobile,
-    mobileWhiteBlockColor,
-    desktopWhiteBlockColor,
-  ]);
+  //   return () => {
+  //     mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  //   };
+  // }, [
+  //   heroImageDesktop,
+  //   heroImageMobile,
+  //   mobileWhiteBlockColor,
+  //   desktopWhiteBlockColor,
+  // ]);
 
   return (
     <div>
