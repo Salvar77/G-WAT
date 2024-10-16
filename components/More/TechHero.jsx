@@ -57,12 +57,12 @@ const TechHero = ({
     <div>
       <section id="techHero" className={classes.techHero} style={{ height }}>
         <div className={classes.techHero__textOverlay}>
-          <h1 className={classes.techHero__title}>
+          <h2 className={classes.techHero__title}>
             {title}{" "}
             {showTechnology && (
               <span className={classes.techHero__titleSpan}>WAT</span>
             )}
-          </h1>
+          </h2>
           <p>{description}</p>
           {showButton && (
             <a href="#galeria" className={classes.techHero__button}>

@@ -25,7 +25,7 @@
     z-index: -1;
     transform: translateY(0);
     transition: transform 0.5s ease-out;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
   }
 
   &__title {
@@ -167,16 +167,16 @@
       background-image: url("../../assets/image/hero5_1920.png");
     }
   }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 2.4rem;
+  }
+
+  .button {
+    font-size: 2.4rem;
+  }
 }
-
-// .hero h1 {
-//   font-size: 4rem;
-// }
-
-// .hero p {
-//   font-size: 2.4rem;
-// }
-
-// .button {
-//   font-size: 2.4rem;
-// }

@@ -57,12 +57,12 @@ const HeroGallery = ({
     <div>
       <section id="heroGaleria" className={classes.hero} style={{ height }}>
         <div className={classes.textOverlay}>
-          <h1 className={classes.hero__title}>
+          <h2 className={classes.hero__title}>
             {title}{" "}
             {showTechnology && (
               <span className={classes.hero__titleSpan}>WAT</span>
             )}
-          </h1>
+          </h2>
           <p>{description}</p>
           {showButton && (
             <a href="#galeria" className={classes.button}>
