@@ -5,7 +5,6 @@ import styles from "./PriceCard.module.scss";
 const PriceCard = ({ service }) => {
   return (
     <div className={styles.card}>
-      {/* Przednia strona karty z obrazem i podstawowymi informacjami */}
       <div className={styles.cardImg}>
         <Image
           src={service.thumbnailPath}
