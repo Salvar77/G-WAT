@@ -90,6 +90,16 @@
   align-items: center;
   padding: 2rem;
 }
+.deviceList,
+.certificatesList {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+}
 
 .deviceText {
   letter-spacing: 0.05rem;
@@ -263,6 +273,13 @@
       align-items: center;
       gap: 1rem;
       text-align: center;
+    }
+  }
+
+  .deviceList,
+  .certificatesList {
+    li {
+      justify-content: center;
     }
   }
 
