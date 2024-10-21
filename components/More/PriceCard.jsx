@@ -13,7 +13,6 @@ const PriceCard = ({ service }) => {
         <h3 className={styles.cardImgTitle}>{service.name}</h3>
       </div>
 
-      {/* Odwrotna strona karty z detalami usługi */}
       <div className={styles.cardInfo}>
         <h3 className={styles.cardInfoTitle}>{service.name}</h3>
         <p className={styles.description}>{service.description}</p>

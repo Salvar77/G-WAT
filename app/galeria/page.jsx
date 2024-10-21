@@ -88,10 +88,6 @@ const Realizations = () => {
               <Image
                 src={allImages[currentIndex].src}
                 alt={allImages[currentIndex].alt}
-                width={allImages[currentIndex].width}
-                height={allImages[currentIndex].height}
-                layout="responsive"
-                objectFit="contain"
               />
             </div>
             <button className={classes.prevButton} onClick={goToPreviousImage}>
