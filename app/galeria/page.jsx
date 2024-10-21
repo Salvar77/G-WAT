@@ -15,26 +15,7 @@ import Image from "next/image";
 import SEO from "../../components/More/SEO";
 import HeroGallery from "@/components/More/HeroGallery";
 
-const allImages = [
-  {
-    src: photo1,
-    alt: "Instalacja paneli fotowoltaicznych",
-    width: 640,
-    height: 427,
-  },
-  { src: photo2, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-  { src: photo3, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-  { src: photo4, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-  {
-    src: photo1,
-    alt: "Instalacja paneli fotowoltaicznych",
-    width: 640,
-    height: 427,
-  },
-  { src: photo2, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-  { src: photo3, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-  { src: photo4, alt: "Zdjęcie realizacji", width: 640, height: 427 },
-];
+import { allImages } from "../../constants";
 
 const Realizations = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,13 +72,7 @@ const Realizations = () => {
               key={index}
               className={classes.gridItem}
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                layout="responsive"
-              />
+              <Image src={image.src} alt={image.alt} loading="lazy" />
             </div>
           ))}
         </div>

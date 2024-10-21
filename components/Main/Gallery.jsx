@@ -9,27 +9,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Gallery.module.scss";
+import { images } from "@/constants";
 
 const Gallery = () => {
-  const images = [
-    {
-      src: photo1,
-      alt: "Zdjęcie z pomiaru elektrycznego",
-    },
-    {
-      src: photo2,
-      alt: "Zdjęcie z pomiaru elektrycznego",
-    },
-    {
-      src: photo3,
-      alt: "Zdjęcie z pomiaru elektrycznego",
-    },
-    {
-      src: photo4,
-      alt: "Zdjęcie z pomiaru elektrycznego",
-    },
-  ];
-
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -70,13 +52,7 @@ const Gallery = () => {
         <Slider {...settings} className={styles.slider}>
           {images.map((image, index) => (
             <div key={index} className={styles.imgBox}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={400}
-                height={300}
-                objectFit="cover"
-              />
+              <Image src={image.src} alt={image.alt} />
             </div>
           ))}
         </Slider>

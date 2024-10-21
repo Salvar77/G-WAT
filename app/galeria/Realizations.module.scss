@@ -40,7 +40,8 @@
 
       img {
         width: 100%;
-        min-height: 100%;
+        max-height: 20rem;
+        object-fit: cover;
         border-radius: 0.6rem;
         transition: transform 0.3s ease;
         &:hover {
