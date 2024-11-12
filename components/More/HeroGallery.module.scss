@@ -24,7 +24,7 @@
     transform: translateY(0);
     transition: transform 0.5s ease-out;
     filter: brightness(0.7);
-    background-image: url("../../assets/image/hero8_640.png");
+    background-image: url("../../assets/image/hero8_1920.png");
   }
 
   &__title {
@@ -90,7 +90,6 @@
   .hero {
     &::before {
       position: fixed;
-      background-image: url("../../assets/image/hero8_1920.png");
     }
   }
   .hero h2 {

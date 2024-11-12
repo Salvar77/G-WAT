@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 53vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../../assets/image/hero5_640.png");
+    background-image: url("../../assets/image/hero5_1920.png");
     // background-attachment: fixed;
     background-size: cover;
     background-position: center;

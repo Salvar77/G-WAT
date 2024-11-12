@@ -5,6 +5,7 @@ import GoogleMap from "@/components/More/GoogleMap";
 import Hero from "@/components/Main/Hero";
 import heroImageMobile from "../assets/image/hero5_640.png";
 import heroImageDesktop from "../assets/image/hero5_1920.png";
+import ContactBubble from "@/components/Main/ContactBubble";
 
 export const metadata = {
   title: "G-WAT Pomiary elektryczne",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <ClientLayout>{children}</ClientLayout>
         <GoogleMap />
         <Footer />
+        <ContactBubble />
       </body>
     </html>
   );
