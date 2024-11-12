@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import classes from "./ContactBubble.module.scss";
-
 const ContactBubble = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
