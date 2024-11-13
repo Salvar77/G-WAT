@@ -2,7 +2,6 @@ import "./globals.scss";
 import ClientLayout from "@/components/More/ClientLayout";
 import Footer from "@/components/Footer/Footer";
 import GoogleMap from "@/components/More/GoogleMap";
-import ContactBubble from "@/components/Main/ContactBubble";
 
 export const metadata = {
   title: "G-WAT Pomiary elektryczne",
@@ -31,7 +30,6 @@ export default function RootLayout({ children }) {
         <ClientLayout>{children}</ClientLayout>
         <GoogleMap />
         <Footer />
-        <ContactBubble />
       </body>
     </html>
   );
