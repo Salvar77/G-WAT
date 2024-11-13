@@ -32,7 +32,7 @@ const ContactBubble = () => {
         <span className={classes.text}>
           Zadzwoń do mnie :{" "}
           <a href="tel:+48503416319" className={classes.phoneNumber}>
-            +48 503 416 319
+            503 416 319
           </a>
         </span>
       </div>
