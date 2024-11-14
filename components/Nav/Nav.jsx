@@ -48,6 +48,9 @@ const Nav = ({ isOpen, toggleNav }) => {
               <Link href="/#kalendarz">Rezerwacje</Link>
             </li>
             <li onClick={handleToggleNav}>
+              <Link href="/#referencje">Referencje</Link>
+            </li>
+            <li onClick={handleToggleNav}>
               <Link href="/#kontakt">Kontakt</Link>
             </li>
           </ul>
