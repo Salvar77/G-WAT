@@ -1,7 +1,7 @@
 @import "../../styles/colors";
 
 .contact {
-  padding: 2rem;
+  padding: 0.9rem;
 
   background-color: $white-smooth;
 
@@ -64,6 +64,7 @@
 
 @media screen and (min-width: 768px) {
   .contact {
+    padding: 2rem;
     &__box {
       &Header {
         font-size: 2.4rem;
