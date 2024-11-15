@@ -38,8 +38,8 @@ export default function Home() {
       <Gallery />
       <PriceList />
       <BookingPage />
-      <ElfsightWidget />
       <Contact />
+      <ElfsightWidget />
     </div>
   );
 }
