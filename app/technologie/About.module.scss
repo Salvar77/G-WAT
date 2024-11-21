@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; // Pełna szerokość kontenera, ograniczenie poniżej
+    width: 100%;
   }
 
   &__images {
@@ -233,7 +233,7 @@
 @media (max-width: 768px) {
   .about__images {
     img {
-      width: calc(50% - 1rem); // dwa obrazy na mniejszych ekranach
+      width: calc(50% - 1rem);
     }
   }
 }

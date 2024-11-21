@@ -1,10 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import photo1 from "../../assets/image/hero1_640.jpg";
-import photo2 from "../../assets/image/hero1_640.jpg";
-import photo3 from "../../assets/image/hero1_640.jpg";
-import photo4 from "../../assets/image/hero1_640.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -67,8 +67,3 @@ const SEO = ({ title, description, image }) => (
 );
 
 export default SEO;
-
-// "sameAs": [
-//   "https://www.facebook.com/gwat",
-//   "https://www.linkedin.com/company/gwat"
-// ],
