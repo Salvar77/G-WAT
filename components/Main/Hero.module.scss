@@ -2,8 +2,8 @@
 
 .hero {
   position: relative;
-  width: 100vw;
-  height: 53vh;
+  // width: 100vw;
+  // height: 53vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,12 +136,6 @@
 }
 
 @media (min-width: 992px) {
-  .hero {
-    &::before {
-      background-image: url("../../assets/image/hero5_1920.png");
-    }
-  }
-
   .hero h1 {
     font-size: 4rem;
   }
