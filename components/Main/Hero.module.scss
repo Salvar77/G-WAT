@@ -12,16 +12,16 @@
 
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: url("../../assets/image/hero5_1920.png");
-    // background-attachment: fixed;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
     z-index: -1;
     transform: translateY(0);
     transition: transform 0.5s ease-out;
@@ -138,8 +138,6 @@
 @media (min-width: 992px) {
   .hero {
     &::before {
-      position: fixed;
-
       background-image: url("../../assets/image/hero5_1920.png");
     }
   }
