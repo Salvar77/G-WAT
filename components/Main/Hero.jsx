@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 import classes from "./Hero.module.scss";
@@ -18,42 +18,20 @@ const Hero = ({
 }) => {
   const [whiteBlockColor, setWhiteBlockColor] = useState(mobileWhiteBlockColor);
 
-  // useEffect(() => {
-  //   const updateHeroHeight = () => {
-  //     setViewportHeight(window.innerHeight);
-  //   };
-
-  //   window.addEventListener("resize", updateHeroHeight);
-  //   updateHeroHeight();
-
-  //   return () => window.removeEventListener("resize", updateHeroHeight);
-  // }, []);
-
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia("(min-width: 992px)");
-  //   const handleMediaQueryChange = (e) => {
-  //     setCurrentImage(e.matches ? heroImageDesktop : heroImageMobile);
-  //     setWhiteBlockColor(
-  //       e.matches ? desktopWhiteBlockColor : mobileWhiteBlockColor
-  //     );
-  //   };
-
-  //   mediaQuery.addEventListener("change", handleMediaQueryChange);
-  //   handleMediaQueryChange(mediaQuery);
-
-  //   return () => {
-  //     mediaQuery.removeEventListener("change", handleMediaQueryChange);
-  //   };
-  // }, [
-  //   heroImageDesktop,
-  //   heroImageMobile,
-  //   mobileWhiteBlockColor,
-  //   desktopWhiteBlockColor,
-  // ]);
-
   return (
     <div>
       <section id="hero" className={classes.hero} style={{ height }}>
+        <div className={classes.backgroundImage}>
+          <Image
+            src={heroImageDesktop}
+            alt="Hero Background"
+            fill
+            priority
+            sizes="100vw"
+            className={classes.backgroundImage__img}
+          />
+        </div>
+
         <div className={classes.textOverlay}>
           <h1 className={classes.hero__title}>
             {title}{" "}
@@ -68,6 +46,7 @@ const Hero = ({
             </a>
           )}
         </div>
+
         <div
           className={`${classes.whiteBlock} ${classes.whiteBlockLeft}`}
           style={{ backgroundColor: whiteBlockColor }}
