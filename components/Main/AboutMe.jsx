@@ -41,7 +41,7 @@ const AboutMe = () => {
           <p className={classes.signature}>Grzegorz Banach</p>
           <div className={classes.buttonWrapper}>
             <Link href="/technologie" className={classes.link}>
-              <button className={classes.exploreButton}>
+              <div className={classes.exploreButton}>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -55,7 +55,7 @@ const AboutMe = () => {
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
                 Technologie
-              </button>
+              </div>
             </Link>
           </div>
         </div>

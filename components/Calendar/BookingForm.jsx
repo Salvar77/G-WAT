@@ -114,10 +114,11 @@ const BookingForm = ({ selectedDate }) => {
       </h3>
 
       <div>
-        <label>Imię:</label>
+        <label htmlFor="name">Imię:</label>
         <TextField
+          id="name"
           type="text"
-          name="Imię"
+          name="name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -126,8 +127,9 @@ const BookingForm = ({ selectedDate }) => {
       </div>
 
       <div>
-        <label>Email:</label>
+        <label htmlFor="email">Email:</label>
         <TextField
+          id="email"
           type="email"
           name="email"
           value={formData.email}
@@ -138,10 +140,11 @@ const BookingForm = ({ selectedDate }) => {
       </div>
 
       <div>
-        <label>Numer Kontaktowy:</label>
+        <label htmlFor="phone">Numer Kontaktowy:</label>
         <TextField
+          id="phone"
           type="tel"
-          name="telefon"
+          name="phone"
           value={formData.phone}
           onChange={handleChange}
           required
