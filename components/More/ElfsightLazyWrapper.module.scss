@@ -1,0 +1,23 @@
+.placeholder {
+  min-height: 200px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholderTitle {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.placeholderText {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}

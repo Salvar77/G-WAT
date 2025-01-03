@@ -8,8 +8,7 @@ import Contact from "@/components/Main/Contact";
 import AboutMe from "@/components/Main/AboutMe";
 import Technologies from "@/components/Main/Technologies";
 import SEO from "../components/More/SEO";
-import classes from "./page.module.scss";
-import ElfsightWidget from "@/components/More/ElfsightWidget";
+import ElfsightLazyWrapper from "@/components/More/ElfsightLazyWrapper";
 
 export default function Home() {
   return (
@@ -38,7 +37,7 @@ export default function Home() {
       <Gallery />
       <PriceList />
       <BookingPage />
-      <ElfsightWidget />
+      <ElfsightLazyWrapper />
       <Contact />
     </div>
   );
