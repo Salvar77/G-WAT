@@ -4,7 +4,6 @@ import ClientLayout from "@/components/More/ClientLayout";
 import Footer from "@/components/Footer/Footer";
 import ContactBubble from "@/components/Main/ContactBubble";
 
-// Metadane muszą być eksportowane z komponentu serwerowego (bez "use client").
 export const metadata = {
   title: "G-WAT Pomiary elektryczne",
   description: "G-WAT Pomiary elektryczne",
@@ -28,7 +27,7 @@ export default function RootLayout({ children }) {
                 j.async=true;
                 j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
                 f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-PQVL22FS');
+              })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
             `,
           }}
         />
@@ -40,7 +39,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PQVL22FS"
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
