@@ -8,11 +8,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
     padding-top: 1rem;
 
     &Info {
       color: $white-smooth;
       margin-bottom: 1rem;
+
+      a {
+        color: $green2;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -29,8 +40,29 @@
       a {
         color: $dark-smooth;
         text-decoration: none;
+
         &:hover {
-          color: $gold-main;
+          color: $green2;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    list-style: none;
+
+    li {
+      a {
+        color: $white-smooth;
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        &:hover {
+          color: $green2;
         }
       }
     }
