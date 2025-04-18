@@ -36,9 +36,8 @@ export default function ElfsightLazyWrapper() {
     : null;
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="referencje">
       {ElfsightWidget && <ElfsightWidget />}
-
       {!ElfsightWidget && (
         <div className={classes.placeholder}>
           <h3 className={classes.placeholderTitle}>Pokaż opinie</h3>

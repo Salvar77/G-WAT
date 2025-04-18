@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager  */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){
