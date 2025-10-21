@@ -230,6 +230,50 @@
   text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
 }
 
+.backupSection {
+  margin: 3rem 0 2rem 0;
+  padding: 0;
+  width: 100%;
+  letter-spacing: 0.1rem;
+
+  h3 {
+    text-align: left;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: $grey-smooth-2;
+  }
+
+  .backupIntro {
+    text-align: left;
+    letter-spacing: 0.12rem;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+  }
+}
+
+.supportedInverters {
+  margin-top: 2.5rem;
+  text-align: left;
+
+  h4 {
+    color: $grey-smooth-2;
+    margin-bottom: 1rem;
+    letter-spacing: 0.08rem;
+  }
+
+  p {
+    letter-spacing: 0.08rem;
+    line-height: 1.8;
+  }
+}
+
+.cennikInfo {
+  line-height: 1.5;
+  a {
+    color: $green2;
+  }
+}
+
 @media (max-width: 768px) {
   .about__images {
     img {
@@ -310,5 +354,21 @@
       right: 1rem;
       font-size: 2.7rem;
     }
+  }
+
+  .backupSection {
+    h3 {
+      text-align: center;
+    }
+
+    .backupIntro {
+      text-align: center;
+    }
+  }
+
+  .supportedInverters {
+    text-align: center;
+    max-width: 1000px;
+    margin: 2.5rem auto 0 auto;
   }
 }

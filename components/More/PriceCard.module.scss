@@ -3,7 +3,7 @@
 .card {
   position: relative;
   margin: 1em;
-  height: 500px;
+  min-height: 500px;
   color: white;
   text-align: center;
   perspective: 1000px;
@@ -113,6 +113,7 @@
 
 @media (min-width: 992px) {
   .card {
-    width: 45%;
+    width: 100%;
+    min-width: 280px;
   }
 }

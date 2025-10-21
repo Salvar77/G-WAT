@@ -157,6 +157,33 @@ const priceList = [
     imagePath: foto8,
     thumbnailPath: foto8,
   },
+  {
+    id: 4,
+    name: "Zasilanie awaryjne (back-up)",
+    description:
+      "Profesjonalna instalacja trybu awaryjnego dla instalacji fotowoltaicznych. Trasy kablowe, podłączenie, konfiguracja i pomiary wykonane przez certyfikowanych specjalistów.",
+    details: [
+      "Trasowanie kabli",
+      "Podłączenie systemu",
+      "Konfiguracja ustawień",
+      "Pomiary i odbiór techniczny",
+      "Obsługa falowników: Deye, Solinteg, GoodWe, FoxEss, Solis, Solax, FelicityEss (T-REX), Sofar",
+    ],
+    regions: [
+      {
+        region: "Z własnymi materiałami klienta",
+        priceBrutto: "1300 zł netto",
+        priceNetto: null,
+      },
+      {
+        region: "Kompleksowo z komponentami",
+        priceBrutto: "3900 zł brutto",
+        priceNetto: "Dodatkowe koszty przy przekroju > 10mm² i długości > 15m",
+      },
+    ],
+    imagePath: foto6,
+    thumbnailPath: foto6,
+  },
 ];
 
 const contactInfo = {

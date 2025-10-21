@@ -42,13 +42,13 @@ const Nav = ({ isOpen, toggleNav }) => {
               <Link href="/galeria">Realizacje</Link>
             </li>
             <li onClick={handleToggleNav}>
-              <Link href="/#cennik">Cennik</Link>
-            </li>
-            <li onClick={handleToggleNav}>
               <Link href="/#kalendarz">Rezerwacje</Link>
             </li>
             <li onClick={handleToggleNav}>
               <Link href="/#referencje">Referencje</Link>
+            </li>
+            <li onClick={handleToggleNav}>
+              <Link href="/cennik">Cennik</Link>
             </li>
             <li onClick={handleToggleNav}>
               <Link href="/#kontakt">Kontakt</Link>
