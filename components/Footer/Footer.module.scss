@@ -1,0 +1,70 @@
+@import "../../styles/colors";
+
+.footer {
+  background-color: $dark-gray;
+  padding: 2rem;
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+
+    &Info {
+      color: $white-smooth;
+      margin-bottom: 1rem;
+
+      a {
+        color: $green2;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    list-style: none;
+
+    li {
+      margin: 0 0.4rem;
+
+      a {
+        color: $dark-smooth;
+        text-decoration: none;
+
+        &:hover {
+          color: $green2;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    list-style: none;
+
+    li {
+      a {
+        color: $white-smooth;
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        &:hover {
+          color: $green2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,374 @@
+@import "../../styles/colors";
+
+.about {
+  padding-top: 5rem;
+  color: $grey-smooth-2;
+  background: linear-gradient(
+    150deg,
+    $white-smooth,
+    $white-smooth,
+    $light-gray
+  );
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  &__header {
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.4rem;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: contain;
+      border-radius: 0.4rem;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+    list-style: none;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  background: linear-gradient(50deg, $white-smooth, $white-smooth, $light-gray);
+  display: flex;
+  justify-content: center;
+  background-color: $light-gray;
+  align-items: center;
+  padding: 2rem;
+}
+.imageWrapperTwo {
+  width: 100%;
+  background: linear-gradient(
+    210deg,
+    $white-smooth,
+    $white-smooth,
+    $light-gray
+  );
+  display: flex;
+  justify-content: center;
+  background-color: $light-gray;
+  align-items: center;
+  padding: 2rem;
+}
+.deviceList,
+.certificatesList {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+}
+
+.deviceText {
+  letter-spacing: 0.05rem;
+  margin-right: 0.8rem;
+}
+
+.deviceInfo {
+  letter-spacing: 0.12rem;
+  padding-bottom: 1rem;
+}
+
+.deviceList {
+  li {
+    list-style: none;
+  }
+}
+
+.certificatesList {
+  margin-top: 2rem;
+
+  h3 {
+    padding-bottom: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.signature {
+  margin-top: 3rem;
+  color: $green2;
+  font-weight: bold;
+}
+
+.hideMobile {
+  display: none;
+}
+
+.span {
+  color: $green2;
+  font-weight: bold;
+}
+
+.modal {
+  width: 90vw;
+  max-width: 600px;
+  margin: auto;
+  background: transparent;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  color: $white-smooth;
+
+  @media (min-width: 768px) {
+    width: 35vw;
+    max-width: 80vw;
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .imageContainer {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 0.4rem;
+    }
+  }
+
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: $white-smooth;
+    -webkit-text-stroke: 1px black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .prevButton {
+    left: 0;
+    font-size: 2.7rem;
+  }
+
+  .nextButton {
+    right: 0;
+    font-size: 2.7rem;
+  }
+}
+
+.customHeroTitleRealizations {
+  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.9);
+}
+
+.backupSection {
+  margin: 3rem 0 2rem 0;
+  padding: 0;
+  width: 100%;
+  letter-spacing: 0.1rem;
+
+  h3 {
+    text-align: left;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: $grey-smooth-2;
+  }
+
+  .backupIntro {
+    text-align: left;
+    letter-spacing: 0.12rem;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+  }
+}
+
+.supportedInverters {
+  margin-top: 2.5rem;
+  text-align: left;
+
+  h4 {
+    color: $grey-smooth-2;
+    margin-bottom: 1rem;
+    letter-spacing: 0.08rem;
+  }
+
+  p {
+    letter-spacing: 0.08rem;
+    line-height: 1.8;
+  }
+}
+
+.cennikInfo {
+  line-height: 1.5;
+  a {
+    color: $green2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__images {
+    img {
+      width: calc(50% - 1rem);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .about {
+    padding-top: 0;
+    max-width: none;
+    margin: 0;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &__images {
+      img {
+        width: 30%;
+        height: 15vh;
+        object-fit: contain;
+      }
+    }
+
+    &__image {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
+      img {
+        width: calc(33% - 1rem);
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  .deviceList,
+  .certificatesList {
+    li {
+      justify-content: center;
+    }
+  }
+
+  .hideMobile {
+    display: block;
+  }
+
+  .signature {
+    font-size: 2rem;
+  }
+
+  .modalContent {
+    .imageContainer {
+      img {
+        height: 70vh;
+        max-height: 80vh;
+      }
+    }
+  }
+
+  .modalContent {
+    .prevButton {
+      left: 1rem;
+      font-size: 2.7rem;
+    }
+
+    .nextButton {
+      right: 1rem;
+      font-size: 2.7rem;
+    }
+  }
+
+  .backupSection {
+    h3 {
+      text-align: center;
+    }
+
+    .backupIntro {
+      text-align: center;
+    }
+  }
+
+  .supportedInverters {
+    text-align: center;
+    max-width: 1000px;
+    margin: 2.5rem auto 0 auto;
+  }
+}

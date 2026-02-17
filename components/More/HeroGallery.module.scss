@@ -1,0 +1,106 @@
+@import "../../styles/colors";
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 53vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+    filter: brightness(0.7);
+    background-image: url("../../assets/image/hero8_1920.png");
+  }
+
+  &__title {
+    color: $white-smooth;
+    z-index: 2;
+    text-shadow: 3px 3px 6px rgba($dark-smooth, 0.9);
+  }
+
+  .whiteBlock {
+    position: absolute;
+    height: 40px;
+    width: 60%;
+    background: $white-smooth;
+    transform: skew(30deg);
+    z-index: 3;
+
+    &Left {
+      bottom: 0;
+      left: -50px;
+    }
+
+    &Right {
+      top: 0;
+      right: -50px;
+      transform: skew(45deg);
+    }
+  }
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 2rem;
+  transition: filter 1s ease-out;
+
+  p {
+    color: $white-smooth;
+    text-shadow: 3px 3px 6px rgba($dark-smooth, 0.9);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero h2 {
+    font-size: 3.4rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    &::before {
+      position: fixed;
+    }
+  }
+  .hero h2 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 2.4rem;
+  }
+
+  .button {
+    font-size: 2.4rem;
+  }
+}

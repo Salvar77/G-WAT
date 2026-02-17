@@ -1,0 +1,119 @@
+@import "../../styles/colors";
+
+.card {
+  position: relative;
+  margin: 1em;
+  min-height: 500px;
+  color: white;
+  text-align: center;
+  perspective: 1000px;
+
+  &:hover {
+    .cardImg {
+      transform: rotateY(-180deg);
+      opacity: 0;
+    }
+    .cardInfo {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.cardImg {
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background: linear-gradient(320deg, $dark-gray, $light-gray, $light-gray);
+  border-radius: 0.4rem;
+  transition: transform 1s, opacity 1s;
+  img {
+    border-radius: 0.4rem;
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+  }
+}
+
+.cardImgTitle {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 4px rgba($grey-smooth-3, 0.7);
+  padding-top: 0.5rem;
+}
+
+.cardImgInfo {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+
+.cardInfo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(150deg, $green2, $green2, $dark-gray);
+  text-shadow: 2px 2px 4px rgba($dark-smooth, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s, opacity 1s;
+}
+
+.cardInfoTitle {
+  font-size: 2.4rem;
+  margin-left: 1rem;
+}
+
+.cardInfoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardInfoListItem {
+  padding: 0.5em 0;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.cardInfoListItem::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+}
+
+.cardInfoListItem:last-child {
+  border-bottom: none;
+}
+
+.description {
+  padding: 1rem;
+}
+
+.regionInfo {
+  margin-left: 1rem;
+}
+
+.regionInfo {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 100%;
+    min-width: 280px;
+  }
+}
