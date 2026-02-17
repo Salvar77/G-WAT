@@ -10,7 +10,7 @@ import icon4 from "../../assets/image/foXess.png";
 import icon5 from "../../assets/image/byd-1.svg";
 import icon6 from "../../assets/image/Growatt-logo.png";
 import icon7 from "../../assets/image/pylontech7.png";
-import icon8 from "../../assets/image/sigenergy-logo.jpeg";
+import icon8 from "../../assets/image/Sigenergy-logo.jpeg";
 import classes from "./About.module.scss";
 import foto from "../../assets/image/KT-128.png";
 import foto2 from "../../assets/image/mierniki1-1.png";
