@@ -110,7 +110,7 @@ const priceList = [
   },
   {
     id: 2,
-    name: "Odbiory instalacji fotowoltaicznych jako niezależny inspektor",
+    name: "Zewnętrzne odbiory po-wykonawcze instalacji fotowoltaicznych ",
     description:
       "Pomiary elektryczne, interpretacja doboru konstrukcji, sprawdzanie prawidłowości montażu.",
     details: [
@@ -120,13 +120,18 @@ const priceList = [
     ],
     regions: [
       {
-        region: "opolskie",
-        priceBrutto: "do negocjacji",
+        region: "do 10kW",
+        priceBrutto: "400 zł + dojazd",
         priceNetto: null,
       },
       {
-        region: "śląskie / dolnośląskie",
-        priceBrutto: "do negocjacji",
+        region: "od 10kW do 20 kW",
+        priceBrutto: "600 zł + dojazd",
+        priceNetto: null,
+      },
+      {
+        region: "powyżej 20 kW",
+        priceBrutto: "900 zł + dojazd",
         priceNetto: null,
       },
     ],
@@ -167,22 +172,42 @@ const priceList = [
       "Podłączenie systemu",
       "Konfiguracja ustawień",
       "Pomiary i odbiór techniczny",
-      "Obsługa falowników: Deye, Solinteg, GoodWe, FoxEss, Solis, Solax, FelicityEss (T-REX), Sofar",
+      "Obsługa falowników: Deye, Solinteg, GoodWe, FoxEss, Solis, Solax, FelicityEss (T-REX), Sofar, Sigenergy",
     ],
     regions: [
       {
         region: "Z własnymi materiałami klienta",
-        priceBrutto: "1300 zł netto",
+        priceBrutto: "1800 zł netto",
         priceNetto: null,
       },
       {
         region: "Kompleksowo z komponentami",
-        priceBrutto: "3900 zł brutto",
+        priceBrutto: "4600 zł brutto",
         priceNetto: "Dodatkowe koszty przy przekroju > 10mm² i długości > 15m",
       },
     ],
     imagePath: foto6,
     thumbnailPath: foto6,
+  },
+  {
+    id: 5,
+    name: "Montaż Ładowarek EV",
+    description:
+      "Profesjonalny montaż ładowarek do samochodów elektrycznych (EV). Konfiguracja i uruchomienie systemów renomowanych producentów.",
+    details: [
+      "Montaż ładowarki",
+      "Konfiguracja systemu",
+      "Producenci: Huawei, Sigenergy, GoodWe, FoxEss",
+    ],
+    regions: [
+      {
+        region: "Cena",
+        priceBrutto: "1700 zł netto",
+        priceNetto: null,
+      },
+    ],
+    imagePath: foto1,
+    thumbnailPath: foto1,
   },
 ];
 
