@@ -140,7 +140,7 @@ const priceList = [
   },
   {
     id: 3,
-    name: "Pomiary instalacji elektrycznej w domach jednorodzinnych",
+    name: "Pomiary instalacji elektrycznej w budynkach mieszkalnych i użytkowych",
     description:
       "Pomiary punktów przyłącza oraz pomiary rezystancji uziemienia dla domów jednorodzinnych.",
     details: [
