@@ -5,11 +5,11 @@ export const metadata = {
     "Technologie G-WAT | Certyfikowany sprzęt do pomiarów elektrycznych Opole",
   description:
     "Wykorzystujemy certyfikowany miernik Sonel MPI-540PV do pomiarów instalacji fotowoltaicznych. Obsługa Huawei, SolarEdge, FoxEss, GoodWe i innych.",
-  alternates: { canonical: "/technologie" },
+  alternates: { canonical: "https://www.g-wat.pl/technologie" },
   keywords:
     "technologie pomiary elektryczne, Sonel MPI-540PV, certyfikaty magazyny energii, pomiary fotowoltaika Opole",
   openGraph: {
-    url: "/technologie",
+    url: "https://www.g-wat.pl/technologie",
     title: "Technologie G-WAT | Certyfikowany sprzęt do pomiarów elektrycznych",
     description:
       "Profesjonalny sprzęt pomiarowy Sonel MPI-540PV i certyfikaty dla magazynów energii. Obsługa wszystkich popularnych falowników.",

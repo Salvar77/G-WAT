@@ -13,11 +13,11 @@ export const metadata = {
   title: "G-WAT Pomiary Elektryczne | Serwis instalacji fotowoltaicznych Opole",
   description:
     "Profesjonalne pomiary elektryczne i serwis instalacji fotowoltaicznych w Opolu. Certyfikowane pomiary, odbiory techniczne, zasilanie awaryjne.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://www.g-wat.pl/" },
   keywords:
     "pomiary elektryczne Opole, serwis fotowoltaiki, pomiary instalacji fotowoltaicznych, odbiory techniczne, zasilanie awaryjne",
   openGraph: {
-    url: "/",
+    url: "https://www.g-wat.pl/",
     title:
       "G-WAT Pomiary Elektryczne | Serwis instalacji fotowoltaicznych Opole",
     description:

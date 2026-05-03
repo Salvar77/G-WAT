@@ -1,0 +1,25 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+	<style>
+		.s0 { fill: #d35400;stroke: #c0c0c0;stroke-miterlimit:10;stroke-width: 3 } 
+		.s1 { fill: #c0c0c0 } 
+		.s2 { fill: #d35400 } 
+		.s3 { fill: none;stroke: #d35400;stroke-miterlimit:10;stroke-width: 2 } 
+		.s4 { fill: none;stroke: #d35400;stroke-miterlimit:10;stroke-width: .4 } 
+		.s5 { fill: #d35400;stroke: #d35400;stroke-miterlimit:10;stroke-width: .4 } 
+	</style>
+	<g id="Layer 1">
+		<path id="Kształt 9" fill-rule="evenodd" class="s0" d="m67.5 108.88l4.8 0.04"/>
+		<path id="G" class="s1" aria-label="G"  d="m50.6 112.7v-8.3q0-1.5 0.8-2.7 0.7-1.2 2-1.9 1.3-0.7 2.8-0.7h9v2.8h-9q-1.1 0-2 0.7-0.8 0.7-0.8 1.8v8.3q0 1 0.8 1.8 0.9 0.7 2 0.7h4.5q1.2 0 2-0.7 0.8-0.8 0.8-1.8v-2.5h-5.1v-2.8h7.9v5.3q0 1.4-0.7 2.6-0.8 1.3-2.1 2-1.3 0.7-2.8 0.7h-4.5q-1.5 0-2.8-0.7-1.3-0.7-2-2-0.8-1.2-0.8-2.6z"/>
+		<path id="WAT" class="s2" aria-label="WAT"  d="m76.9 117l-5.8-17.2h3.1l4.6 15.4h-0.7l4.6-15.4h2.8l4.7 15.4h-0.8l4.6-15.4h3l-5.8 17.2h-3l-4.5-14.8h0.7l-4.6 14.8zm19.2 0l7.6-17.2h2.9l7.5 17.2h-3l-6-14.3-6 14.3zm3.8-4v-2.4h10.3v2.4zm12.4-10.7v-2.5h13.7v2.5h-5.4v14.7h-2.9v-14.7z"/>
+		<path id="Kształt 4" fill-rule="evenodd" class="s3" d="m86.5 91.5c-11.89 0-21.5-9.61-21.5-21.5 0-11.89 9.61-21.5 21.5-21.5 11.89 0 21.5 9.61 21.5 21.5 0 11.89-9.61 21.5-21.5 21.5z"/>
+		<path id="Kształt 8" fill-rule="evenodd" class="s3" d="m86.24 78.9v9.59c0 0-0.02 2.1 3.49 2.76"/>
+		<path id="Kształt 7" fill-rule="evenodd" class="s3" d="m90 83.87"/>
+		<path id="Kształt 6" fill-rule="evenodd" class="s3" d="m90.26 84.2"/>
+		<path id="Kształt 1" fill-rule="evenodd" class="s4" d=""/>
+		<path id="Kształt 2" fill-rule="evenodd" class="s3" d="m90.18 84.44"/>
+		<path id="Kształt 3" fill-rule="evenodd" class="s3" d="m90.26 84.24"/>
+		<path class="s5" d="m88.5 71.6c0 0 0.7-0.1 0.7 0.4v2.5h0.2v4.1c0 0 0 0.5-0.8 0.5h-5.3c0 0-0.7 0.1-0.7-0.4v-4.2h0.2v-2.5c0 0-0.1-0.4 0.7-0.4v-1.6l-0.4-0.3 0.8-0.7v2.6h0.5v-1.2h0.4v-4.3h2.4v4.3h0.4v1.2h0.5"/>
+		<path class="s5" d="m88.5 71.6v-1.6l0.4-0.3-0.8-0.7v2.6"/>
+		<path class="s5" d="m83.1 64.4v-1.7h1.1v-1.1h-1.1v-9.7c0 0 0-0.4 0.5-0.4h4.7c0 0 0.6 0 0.6 0.5v9.6h-1.1v1.1h1.1v1.7z"/>
+	</g>
+</svg>

@@ -6,11 +6,11 @@ export const metadata = {
   title: "Cennik usług elektrycznych | G-WAT Pomiary Elektryczne Opole",
   description:
     "Sprawdź aktualne ceny pomiarów instalacji fotowoltaicznych, odbiorów technicznych, pomiarów elektrycznych i zasilania awaryjnego.",
-  alternates: { canonical: "/cennik" },
+  alternates: { canonical: "https://www.g-wat.pl/cennik" },
   keywords:
     "cennik pomiary elektryczne, cena pomiary fotowoltaika, odbiory instalacji, zasilanie awaryjne cena, pomiary elektryczne Opole",
   openGraph: {
-    url: "/cennik",
+    url: "https://www.g-wat.pl/cennik",
     title: "Cennik usług elektrycznych | G-WAT Pomiary Elektryczne Opole",
     description:
       "Poznaj szczegółowy cennik profesjonalnych usług elektrycznych: pomiary instalacji fotowoltaicznych, odbiory techniczne, pomiary elektryczne i montaż zasilania awaryjnego.",

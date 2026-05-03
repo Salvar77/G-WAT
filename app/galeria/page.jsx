@@ -1,16 +1,16 @@
 import RealizationsClient from "./RealizationsClient";
 
 export const metadata = {
-  title: "Cennik usług elektrycznych | G-WAT Pomiary Elektryczne Opole",
+  title: "Galeria realizacji G-WAT | Pomiary elektryczne i instalacje Opole",
   description:
-    "Cennik pomiarów instalacji fotowoltaicznych, odbiorów technicznych i zasilania awaryjnego. Profesjonalne usługi elektryczne w Opolu i na Śląsku.",
-  alternates: { canonical: "/realizacje" },
+    "Galeria zdjęć z realizacji G-WAT: pomiary instalacji fotowoltaicznych, odbiory techniczne, serwis falowników w Opolu i na Śląsku.",
+  alternates: { canonical: "https://www.g-wat.pl/galeria" },
   keywords:
     "realizacje pomiary elektryczne, galeria instalacje fotowoltaiczne, zdjęcia pomiary fotowoltaika, odbiory techniczne Opole, serwis falowników Śląsk",
   openGraph: {
-    url: "/realizacje",
+    url: "https://www.g-wat.pl/galeria",
     title:
-      "Realizacje G-WAT | Galeria pomiarów elektrycznych i instalacji fotowoltaicznych Opole",
+      "Galeria G-WAT | Zdjęcia z pomiarów elektrycznych i instalacji fotowoltaicznych",
     description:
       "Galeria naszych realizacji: pomiary instalacji fotowoltaicznych, odbiory techniczne, serwis falowników i montaż zasilania awaryjnego. Zobacz zdjęcia z wykonanych prac.",
     type: "website",
