@@ -46,8 +46,14 @@ const PriceList = () => {
       setTimeout(() => {
         const headerRef = headerRefs.current.get(id);
         if (headerRef) {
+          const navbar = document.querySelector("nav");
+          const navHeight = navbar ? navbar.getBoundingClientRect().height : 90;
+          const EXTRA_OFFSET = 16;
+
           const headerRect = headerRef.getBoundingClientRect();
-          const offsetPosition = window.pageYOffset + headerRect.top - 20;
+          const offsetPosition =
+            window.scrollY + headerRect.top - navHeight - EXTRA_OFFSET;
+
           window.scrollTo({
             top: offsetPosition,
             behavior: "smooth",
