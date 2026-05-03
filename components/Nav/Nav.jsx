@@ -47,20 +47,17 @@ const Nav = ({ isOpen, toggleNav }) => {
       <div className={classes.nav__container}>
         <div className={classes.nav__items}>
           <ul aria-hidden className={classes.nav__item}>
+            {/* Subpages: learn & discover */}
             <li onClick={handleToggleNav}>
               <Link href="/technologie">Technologie</Link>
             </li>
             <li onClick={handleToggleNav}>
               <Link href="/galeria">Realizacje</Link>
             </li>
-            <li>
-              <a
-                href="/#kalendarz"
-                onClick={(e) => handleAnchorClick(e, "kalendarz")}
-              >
-                Rezerwacje
-              </a>
+            <li onClick={handleToggleNav}>
+              <Link href="/cennik">Cennik</Link>
             </li>
+            {/* Homepage anchors: trust → action → support */}
             <li>
               <a
                 href="/#referencje"
@@ -69,8 +66,13 @@ const Nav = ({ isOpen, toggleNav }) => {
                 Referencje
               </a>
             </li>
-            <li onClick={handleToggleNav}>
-              <Link href="/cennik">Cennik</Link>
+            <li>
+              <a
+                href="/#kalendarz"
+                onClick={(e) => handleAnchorClick(e, "kalendarz")}
+              >
+                Rezerwacje
+              </a>
             </li>
             <li>
               <a
