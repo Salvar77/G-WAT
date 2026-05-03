@@ -57,21 +57,21 @@ const Nav = ({ isOpen, toggleNav }) => {
             <li onClick={handleToggleNav}>
               <Link href="/cennik">Cennik</Link>
             </li>
-            {/* Homepage anchors: trust → action → support */}
-            <li>
-              <a
-                href="/#referencje"
-                onClick={(e) => handleAnchorClick(e, "referencje")}
-              >
-                Referencje
-              </a>
-            </li>
+            {/* Homepage anchors: page order → action → support */}
             <li>
               <a
                 href="/#kalendarz"
                 onClick={(e) => handleAnchorClick(e, "kalendarz")}
               >
                 Rezerwacje
+              </a>
+            </li>
+            <li>
+              <a
+                href="/#referencje"
+                onClick={(e) => handleAnchorClick(e, "referencje")}
+              >
+                Referencje
               </a>
             </li>
             <li>
