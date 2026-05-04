@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
               "@id": "https://www.g-wat.pl/#business",
               name: "G-WAT Pomiary Elektryczne",
               url: "https://www.g-wat.pl",
-              logo: "https://www.g-wat.pl/g-wat10.png",
-              image: "https://www.g-wat.pl/g-wat10.png",
+              logo: "https://www.g-wat.pl/g-wat-logo.svg",
+              image: "https://www.g-wat.pl/g-wat-logo.svg",
               description:
                 "Profesjonalne pomiary elektryczne i serwis instalacji fotowoltaicznych w Opolu. Certyfikowane pomiary, odbiory techniczne, zasilanie awaryjne.",
               telephone: "+48 503 416 319",
