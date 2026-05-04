@@ -49,6 +49,43 @@ export default function RootLayout({ children }) {
 
         <ClientLayout>{children}</ClientLayout>
 
+        <script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://www.g-wat.pl/#business",
+              name: "G-WAT Pomiary Elektryczne",
+              url: "https://www.g-wat.pl",
+              logo: "https://www.g-wat.pl/g-wat10.png",
+              image: "https://www.g-wat.pl/g-wat10.png",
+              description:
+                "Profesjonalne pomiary elektryczne i serwis instalacji fotowoltaicznych w Opolu. Certyfikowane pomiary, odbiory techniczne, zasilanie awaryjne.",
+              telephone: "+48 503 416 319",
+              email: "banach@g-wat.pl",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Stefana Okrzei 11/9",
+                addressLocality: "Opole",
+                postalCode: "45-713",
+                addressCountry: "PL",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 50.6666,
+                longitude: 17.9233,
+              },
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Opole i okolice",
+              },
+              hasMap: "https://share.google/8qNzN264gz3DJf777",
+              sameAs: ["https://share.google/8qNzN264gz3DJf777"],
+            }),
+          }}
+        />
         <Footer />
         <ContactBubble />
       </body>
