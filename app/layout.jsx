@@ -3,6 +3,7 @@ import Script from "next/script";
 import ClientLayout from "@/components/More/ClientLayout";
 import Footer from "@/components/Footer/Footer";
 import ContactBubble from "@/components/Main/ContactBubble";
+import GWatSeoSchema from "@/components/Seo/GWatSeoSchema";
 
 export const metadata = {
   title: "G-WAT Pomiary elektryczne",
@@ -77,6 +78,11 @@ export default function RootLayout({ children }) {
                 latitude: 50.6666,
                 longitude: 17.9233,
               },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "48",
+              },
               areaServed: {
                 "@type": "AdministrativeArea",
                 name: "Opole i okolice",
@@ -86,6 +92,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        <GWatSeoSchema />
         <Footer />
         <ContactBubble />
       </body>
