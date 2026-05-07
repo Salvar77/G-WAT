@@ -18,53 +18,131 @@ const GWatSeoSchema = () => {
         "@type": "ListItem",
         "position": 2,
         "name": "Cennik Usług",
-        "item": `${domain}/#cennik`
+        "item": `${domain}/cennik`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Pomiary Fotowoltaiki",
-        "item": `${domain}/#technologie`
+        "item": `${domain}/technologie`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Galeria Realizacji",
-        "item": `${domain}/#galeria`
+        "item": `${domain}/galeria`
       }
     ]
   };
 
   // 2. Services as Products (to get "Zakupy" report in GSC)
+  const sharedReturnPolicy = {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "PL",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+  };
+
+  const sharedShipping = {
+    "@type": "OfferShippingDetails",
+    "shippingRate": {
+      "@type": "MonetaryAmount",
+      "value": "0",
+      "currency": "PLN"
+    },
+    "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "PL"
+    },
+    "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "DAY"
+      },
+      "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "DAY"
+      }
+    }
+  };
+
   const services = [
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Pomiary instalacji fotowoltaicznych Opole",
-      "image": `${domain}/g-wat10.png`,
+      "image": `${domain}/g-wat-logo.svg`,
       "description": "Profesjonalne pomiary strony DC i AC, rezystancja izolacji i uziemienia instalacji PV.",
       "brand": { "@type": "Brand", "name": "G-WAT" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "24",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Dawid Kontowicz"
+        },
+        "reviewBody": "Usługa została zrealizowana w sposób w pełni profesjonalny i rzetelny. Pan Grzegorz wyróżnia się bardzo dużą wiedzą techniczną, wysokimi kompetencjami oraz precyzyjną oceną analizowanych zagadnień. Zdecydowanie polecamy firmę G-WAT."
+      },
       "offers": {
         "@type": "Offer",
         "url": `${domain}/#cennik`,
         "price": "400.00",
         "priceCurrency": "PLN",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "hasMerchantReturnPolicy": sharedReturnPolicy,
+        "shippingDetails": sharedShipping
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Montaż zasilania awaryjnego Back-up",
-      "image": `${domain}/g-wat10.png`,
+      "image": `${domain}/g-wat-logo.svg`,
       "description": "Instalacja trybu awaryjnego dla falowników Deye, GoodWe, FoxEss i innych.",
       "brand": { "@type": "Brand", "name": "G-WAT" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "18",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Grzegorz Grudziński"
+        },
+        "reviewBody": "Instalacja wykonana z niezwykłą pedantycznością! Każdy element, od montażu falownika po integrację z systemem back-up, świadczy o wysokiej dbałości o szczegóły. To prawdziwy wzór dla innych realizacji!"
+      },
       "offers": {
         "@type": "Offer",
         "url": `${domain}/#cennik`,
         "price": "1800.00",
         "priceCurrency": "PLN",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "hasMerchantReturnPolicy": sharedReturnPolicy,
+        "shippingDetails": sharedShipping
       }
     }
   ];
@@ -109,30 +187,36 @@ const GWatSeoSchema = () => {
       {
         "@type": "SiteNavigationElement",
         "position": 1,
-        "name": "O mnie",
-        "url": `${domain}/#about`
+        "name": "Technologie",
+        "url": `${domain}/technologie`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 2,
-        "name": "Technologie",
-        "url": `${domain}/#technologie`
+        "name": "Realizacje",
+        "url": `${domain}/galeria`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 3,
         "name": "Cennik",
-        "url": `${domain}/#cennik`
+        "url": `${domain}/cennik`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 4,
-        "name": "Galeria",
-        "url": `${domain}/#galeria`
+        "name": "Rezerwacje",
+        "url": `${domain}/#kalendarz`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 5,
+        "name": "Referencje",
+        "url": `${domain}/#referencje`
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
         "name": "Kontakt",
         "url": `${domain}/#kontakt`
       }
