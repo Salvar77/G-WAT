@@ -88,7 +88,12 @@ export default function RootLayout({ children }) {
                 name: "Opole i okolice",
               },
               hasMap: "https://share.google/8qNzN264gz3DJf777",
-              sameAs: ["https://share.google/8qNzN264gz3DJf777"],
+              sameAs: [
+                "https://share.google/8qNzN264gz3DJf777",
+                "https://www.gowork.pl/g-wat-grzegorz-banach,24867761/dane-kontaktowe-firmy",
+                "https://multielektryk.pl/opolskie/opole/opole-45-001/g-wat-grzegorz-banach-180909",
+                "https://k-energy.com.pl/opolskie/opole/opole-45-001/g-wat-grzegorz-banach-1979",
+              ],
             }),
           }}
         />
